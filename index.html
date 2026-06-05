@@ -1,0 +1,1034 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Atif Lodhi — Medical Devices · Life Sciences · Program Leadership</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700;900&family=DM+Sans:wght@300;400;500&family=DM+Mono:wght@400;500&display=swap" rel="stylesheet">
+<style>
+  *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+  html { scroll-behavior: smooth; }
+
+  :root {
+    --ink:      #1e2a3a;
+    --ink2:     #2c3e52;
+    --ac:       #4a7fa5;
+    --ac2:      #355f7d;
+    --ac3:      #6b9dbf;
+    --ac-light: #e8f1f8;
+    --ac-pale:  #f0f6fa;
+    --muted:    #6b7280;
+    --rule:     #dde2e8;
+    --paper:    #f5f6f8;
+    --white:    #ffffff;
+  }
+
+  body {
+    font-family: 'DM Sans', sans-serif;
+    background: var(--paper);
+    color: var(--ink);
+    line-height: 1.65;
+    overflow-x: hidden;
+  }
+
+  a { color: inherit; text-decoration: none; }
+
+  .badge {
+    display: inline-block;
+    font-size: 10px;
+    letter-spacing: 0.07em;
+    text-transform: uppercase;
+    padding: 3px 9px;
+    border-radius: 4px;
+    font-weight: 600;
+    white-space: nowrap;
+  }
+  .bd-dark  { background: #1e2a3a; color: #b8cfe0; }
+  .bd-blue  { background: #e8f1f8; color: #2c3e52; border: 1px solid #c5d8e8; }
+  .bd-gray  { background: #f1f3f5; color: #4b5563; border: 1px solid #dde2e8; }
+
+  /* ── Header ── */
+  header {
+    background: var(--ink);
+    color: #fff;
+    padding: 72px 48px 0;
+    position: relative;
+    overflow: hidden;
+  }
+  header::after {
+    content: 'TPM';
+    position: absolute;
+    right: -12px; bottom: -28px;
+    font-family: 'Playfair Display', serif;
+    font-size: 160px; font-weight: 900;
+    color: rgba(255,255,255,0.025);
+    line-height: 1; pointer-events: none;
+  }
+  .h-inner {
+    max-width: 1000px;
+    margin: auto;
+    display: grid;
+    grid-template-columns: 1fr auto;
+    align-items: end;
+    gap: 24px;
+  }
+  .eyebrow {
+    font-size: 10px;
+    letter-spacing: 0.22em;
+    text-transform: uppercase;
+    color: #6b9dbf;
+    margin-bottom: 16px;
+    font-weight: 500;
+  }
+  .h-name {
+    font-family: 'Playfair Display', serif;
+    font-size: clamp(40px, 6vw, 58px);
+    font-weight: 900;
+    line-height: 1.08;
+    letter-spacing: -0.02em;
+    color: #fff;
+  }
+  .h-name span { color: #7fb8d8; }
+  .h-sub {
+    margin-top: 14px;
+    font-size: 13.5px;
+    color: #8aabbf;
+    max-width: 500px;
+    line-height: 1.75;
+  }
+  .pill-row { display: flex; flex-wrap: wrap; gap: 8px; margin-top: 22px; }
+  .cred-pill {
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    background: rgba(74,127,165,0.18);
+    border: 1px solid rgba(107,157,191,0.3);
+    border-radius: 4px;
+    padding: 5px 12px;
+    font-size: 10px;
+    color: #8aabbf;
+    font-weight: 600;
+    letter-spacing: 0.06em;
+    text-transform: uppercase;
+  }
+  .cred-pill::before { content: '◆'; font-size: 7px; color: #6b9dbf; }
+  .h-meta { text-align: right; }
+  .ln-btn {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    padding: 10px 18px;
+    background: transparent;
+    border: 1px solid rgba(255,255,255,0.18);
+    color: #fff;
+    font-size: 12px;
+    letter-spacing: 0.06em;
+    border-radius: 6px;
+    transition: border-color 0.2s, color 0.2s;
+  }
+  .ln-btn:hover { border-color: #6b9dbf; color: #7fb8d8; }
+  .contact-row {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    padding: 18px 0;
+    margin-top: 20px;
+    border-top: 1px solid rgba(255,255,255,0.07);
+  }
+  .contact-item {
+    display: flex;
+    align-items: center;
+    gap: 7px;
+    font-size: 12.5px;
+    color: #8aabbf;
+  }
+  .contact-item svg { opacity: 0.65; flex-shrink: 0; }
+
+  /* ── Metrics strip ── */
+  .metrics-strip { background: #2c3e52; padding: 0 48px; }
+  .metrics-inner {
+    max-width: 1000px;
+    margin: auto;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    border-left: 1px solid rgba(255,255,255,0.07);
+  }
+  .mc { padding: 22px 24px; border-right: 1px solid rgba(255,255,255,0.07); }
+  .mc-num {
+    font-family: 'Playfair Display', serif;
+    font-size: 32px; font-weight: 900;
+    color: #c5dcea; line-height: 1; margin-bottom: 4px;
+  }
+  .mc-lbl { font-size: 10px; color: #6b9dbf; letter-spacing: 0.08em; text-transform: uppercase; }
+
+  /* ── Nav ── */
+  nav {
+    background: var(--white);
+    border-bottom: 1px solid var(--rule);
+    position: sticky; top: 0; z-index: 100;
+  }
+  .nav-inner {
+    max-width: 1000px;
+    margin: auto;
+    display: flex;
+    overflow-x: auto;
+    scrollbar-width: none;
+  }
+  .nav-inner::-webkit-scrollbar { display: none; }
+  .nav-inner a {
+    padding: 14px 20px;
+    font-size: 11px;
+    letter-spacing: 0.09em;
+    text-transform: uppercase;
+    color: var(--muted);
+    white-space: nowrap;
+    border-bottom: 2px solid transparent;
+    transition: color 0.2s, border-color 0.2s;
+    font-weight: 500;
+  }
+  .nav-inner a:hover { color: var(--ink); border-bottom-color: var(--ac); }
+
+  /* ── Container ── */
+  .container { max-width: 1000px; margin: auto; padding: 52px 24px 88px; }
+  section { margin-bottom: 56px; }
+
+  /* ── Section labels ── */
+  .sec-label { display: flex; align-items: center; gap: 12px; margin-bottom: 24px; }
+  .sec-num { font-family: 'Playfair Display', serif; font-size: 13px; color: var(--ac); font-weight: 700; }
+  .sec-label h2 { font-family: 'Playfair Display', serif; font-size: 21px; font-weight: 700; letter-spacing: -0.01em; }
+  .sec-label::after { content: ''; flex: 1; height: 1px; background: var(--rule); }
+
+  /* ── Summary ── */
+  .sum-banner {
+    background: var(--ink);
+    border-radius: 10px;
+    padding: 36px 40px;
+    position: relative;
+    overflow: hidden;
+  }
+  .sum-banner::after {
+    content: '\201C';
+    position: absolute; right: 28px; top: -10px;
+    font-family: 'Playfair Display', serif;
+    font-size: 160px; font-weight: 900;
+    color: rgba(74,127,165,0.08); line-height: 1; pointer-events: none;
+  }
+  .sum-banner p { font-size: 14px; color: #b8c8d5; line-height: 1.88; }
+  .sum-banner p + p { margin-top: 12px; }
+  .sum-banner p strong { color: #7fb8d8; font-weight: 500; }
+  .sum-byline {
+    margin-top: 18px;
+    font-family: 'DM Mono', monospace;
+    font-size: 10px;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+    color: #4a5a68;
+  }
+
+  /* ── Impact ── */
+  .impact-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(175px, 1fr)); gap: 12px; }
+  .stat-card {
+    background: var(--ink);
+    color: #fff;
+    border-radius: 10px;
+    padding: 26px 22px;
+    transition: transform 0.2s;
+  }
+  .stat-card:hover { transform: translateY(-2px); }
+  .stat-val {
+    font-family: 'Playfair Display', serif;
+    font-size: 34px; font-weight: 900;
+    color: #7fb8d8; line-height: 1; letter-spacing: -0.02em;
+  }
+  .stat-lbl { margin-top: 7px; font-size: 10px; letter-spacing: 0.08em; text-transform: uppercase; color: #8aabbf; }
+  .stat-note { margin-top: 6px; font-size: 11px; color: #3d5060; line-height: 1.45; }
+
+  /* ── Timeline ── */
+  .timeline { position: relative; }
+  .tl-line { position: absolute; left: 120px; top: 0; bottom: 0; width: 1px; background: var(--rule); }
+  .tl-item { display: grid; grid-template-columns: 110px 30px 1fr; gap: 0 14px; margin-bottom: 12px; align-items: start; }
+  .tl-date { text-align: right; padding-top: 20px; font-size: 10px; color: var(--muted); letter-spacing: 0.03em; line-height: 1.45; font-family: 'DM Mono', monospace; }
+  .tl-dot-col { display: flex; flex-direction: column; align-items: center; padding-top: 22px; }
+  .tl-dot { width: 12px; height: 12px; border-radius: 50%; background: var(--ac); border: 2px solid var(--paper); flex-shrink: 0; z-index: 1; }
+  .tl-card {
+    background: var(--white);
+    border: 1px solid var(--rule);
+    border-left: 3px solid var(--ac);
+    border-radius: 0 10px 10px 0;
+    padding: 20px 22px;
+    margin-bottom: 4px;
+    transition: border-left-color 0.2s, box-shadow 0.2s;
+  }
+  .tl-card:hover { border-left-color: var(--ink2); box-shadow: 0 3px 14px rgba(0,0,0,0.06); }
+  .tl-role { font-family: 'Playfair Display', serif; font-size: 15px; font-weight: 700; margin-bottom: 2px; }
+  .tl-co { font-size: 12.5px; color: var(--ac2); font-weight: 600; margin-bottom: 9px; }
+  .tl-meta { display: flex; flex-wrap: wrap; gap: 6px; margin-bottom: 11px; }
+  .tl-body { font-size: 13px; color: #4b5563; line-height: 1.75; margin-bottom: 12px; }
+  .tl-tags { display: flex; flex-wrap: wrap; gap: 5px; }
+  .tl-tag { font-size: 10px; background: #f1f5f9; color: #475569; padding: 2px 8px; border-radius: 3px; font-weight: 500; }
+
+  /* ── Competencies ── */
+  .comp-wrap { display: grid; grid-template-columns: repeat(auto-fill, minmax(210px, 1fr)); gap: 13px; }
+  .comp-cluster {
+    background: var(--white);
+    border: 1px solid var(--rule);
+    border-radius: 10px;
+    padding: 20px 22px;
+  }
+  .comp-cluster-title { font-size: 10px; letter-spacing: 0.1em; text-transform: uppercase; color: var(--ac); font-weight: 600; margin-bottom: 13px; }
+  .comp-item { display: flex; align-items: center; gap: 9px; font-size: 12.5px; color: var(--ink); padding: 5px 0; border-bottom: 1px solid var(--rule); }
+  .comp-item:last-child { border-bottom: none; }
+  .comp-dot { width: 5px; height: 5px; background: var(--ac); border-radius: 50%; flex-shrink: 0; }
+
+  /* ── Spotlights ── */
+  .case-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(300px, 1fr)); gap: 14px; }
+  .case-card {
+    background: var(--white);
+    border: 1px solid var(--rule);
+    border-radius: 10px;
+    overflow: hidden;
+    display: flex; flex-direction: column;
+    transition: transform 0.2s, box-shadow 0.2s;
+  }
+  .case-card:hover { transform: translateY(-2px); box-shadow: 0 6px 22px rgba(0,0,0,0.07); }
+  .case-accent { height: 3px; background: var(--ac); }
+  .case-body { padding: 24px; flex: 1; display: flex; flex-direction: column; }
+  .case-hd { display: flex; justify-content: space-between; align-items: flex-start; margin-bottom: 14px; gap: 10px; }
+  .case-icon { width: 36px; height: 36px; background: var(--ac-light); border-radius: 8px; display: flex; align-items: center; justify-content: center; font-size: 16px; flex-shrink: 0; }
+  .case-title { font-family: 'Playfair Display', serif; font-size: 15px; font-weight: 700; margin-bottom: 14px; }
+  .cb-label { font-size: 9px; letter-spacing: 0.14em; text-transform: uppercase; font-weight: 700; margin-bottom: 5px; }
+  .cb-label.prob { color: #9a3412; }
+  .cb-label.appr { color: #1d4ed8; }
+  .cb-label.outc { color: #166534; }
+  .cb-p { font-size: 12.5px; color: #4b5563; line-height: 1.75; }
+  .cb-divider { height: 1px; background: var(--rule); margin: 11px 0; }
+  .cb-outcome { background: #e8f1f8; border: 1px solid #c5d8e8; border-radius: 6px; padding: 11px 14px; margin-top: 4px; }
+  .cb-outcome p { font-size: 12.5px; color: #1e3a5f; line-height: 1.72; }
+
+  /* ── PMO Framework ── */
+  .pmo-intro { background: var(--white); border: 1px solid var(--rule); border-radius: 10px; padding: 26px 28px; margin-bottom: 24px; }
+  .pmo-intro p { font-size: 13.5px; color: #4b5563; line-height: 1.78; }
+  .pipeline { display: grid; grid-template-columns: repeat(5, 1fr); border: 1px solid var(--rule); border-radius: 10px; overflow: hidden; margin-bottom: 24px; }
+  .phase { padding: 15px 11px; background: var(--white); border-right: 1px solid var(--rule); cursor: pointer; transition: background 0.2s; }
+  .phase:last-child { border-right: none; }
+  .phase:hover { background: var(--ac-pale); }
+  .phase.active { background: var(--ink); }
+  .phase-num { font-size: 9px; letter-spacing: 0.15em; text-transform: uppercase; color: var(--ac); font-weight: 700; margin-bottom: 6px; }
+  .phase-title { font-size: 12px; font-weight: 600; color: var(--ink); line-height: 1.3; }
+  .phase.active .phase-title { color: #c5dcea; }
+  .phase-sub { font-size: 10px; color: var(--muted); margin-top: 3px; line-height: 1.35; }
+  .phase.active .phase-sub { color: #6b9dbf; }
+  .detail-panel { background: var(--white); border: 1px solid var(--rule); border-radius: 10px; padding: 24px 28px; margin-bottom: 26px; min-height: 180px; }
+  .dp-header { display: flex; align-items: flex-start; justify-content: space-between; margin-bottom: 16px; gap: 14px; }
+  .dp-icon { width: 40px; height: 40px; background: var(--ac-light); border-radius: 8px; display: flex; align-items: center; justify-content: center; font-size: 18px; flex-shrink: 0; }
+  .dp-phase-lbl { font-size: 9px; letter-spacing: 0.12em; text-transform: uppercase; color: var(--ac); font-weight: 700; margin-bottom: 4px; }
+  .dp-title { font-family: 'Playfair Display', serif; font-size: 18px; font-weight: 700; }
+  .dp-body { font-size: 13.5px; color: #4b5563; line-height: 1.78; margin-bottom: 16px; }
+  .pill-list { display: flex; flex-wrap: wrap; gap: 7px; }
+  .pill { font-size: 10px; background: var(--ac-light); color: #2c3e52; padding: 3px 10px; border-radius: 4px; font-weight: 600; }
+  .pill.gov { background: #f1f5f9; color: #475569; }
+  .ps-label { margin-bottom: 8px; font-size: 10px; letter-spacing: 0.1em; text-transform: uppercase; color: var(--muted); font-weight: 600; }
+  .domains-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(185px, 1fr)); gap: 10px; }
+  .domain-card { background: var(--white); border: 1px solid var(--rule); border-radius: 7px; padding: 13px 15px; transition: border-color 0.2s; }
+  .domain-card:hover { border-color: var(--ac); }
+  .dc-title { font-size: 12px; font-weight: 600; margin-bottom: 3px; }
+  .dc-sub { font-size: 10.5px; color: var(--muted); line-height: 1.42; }
+
+  /* ── Artifacts ── */
+  .art-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(260px, 1fr)); gap: 13px; }
+  .art-card {
+    background: var(--white);
+    border: 1px solid var(--rule);
+    border-radius: 10px;
+    padding: 20px 22px;
+    display: flex; flex-direction: column;
+    transition: transform 0.2s, border-color 0.2s, box-shadow 0.2s;
+    position: relative; overflow: hidden;
+  }
+  .art-card::before { content: ''; position: absolute; top: 0; left: 0; right: 0; height: 3px; background: var(--ac); opacity: 0; transition: opacity 0.2s; }
+  .art-card:hover { transform: translateY(-2px); box-shadow: 0 6px 22px rgba(0,0,0,0.07); border-color: #c5d8e8; }
+  .art-card:hover::before { opacity: 1; }
+  .art-top { display: flex; justify-content: space-between; align-items: flex-start; margin-bottom: 11px; }
+  .art-icon { width: 36px; height: 36px; background: var(--ac-light); border-radius: 8px; display: flex; align-items: center; justify-content: center; font-size: 16px; flex-shrink: 0; }
+  .art-title { font-family: 'Playfair Display', serif; font-size: 15px; font-weight: 700; margin-bottom: 6px; }
+  .art-desc { font-size: 12.5px; color: #4b5563; line-height: 1.68; flex: 1; }
+  .art-reflect { margin-top: 11px; padding-top: 11px; border-top: 1px dashed var(--rule); font-size: 11px; color: var(--muted); font-style: italic; line-height: 1.55; }
+  .art-foot { margin-top: 16px; display: flex; justify-content: flex-end; }
+  .dl-btn {
+    display: inline-flex; align-items: center; gap: 6px;
+    padding: 8px 14px;
+    background: var(--ink); color: #8aabbf;
+    font-size: 10px; letter-spacing: 0.07em; text-transform: uppercase;
+    border-radius: 5px; font-weight: 600;
+    transition: background 0.2s;
+    text-decoration: none;
+  }
+  .dl-btn:hover { background: var(--ink2); }
+  .dl-btn svg { width: 12px; height: 12px; fill: currentColor; }
+
+  /* ── Education ── */
+  .edu-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(270px, 1fr)); gap: 13px; }
+  .edu-card { background: var(--white); border: 1px solid var(--rule); border-radius: 10px; padding: 22px 24px; transition: border-color 0.2s; }
+  .edu-card:hover { border-color: var(--ac); }
+  .edu-deg { font-family: 'Playfair Display', serif; font-size: 15px; font-weight: 700; margin-bottom: 3px; }
+  .edu-field { font-size: 12px; color: #4b5563; margin-bottom: 6px; }
+  .edu-school { font-size: 12px; color: var(--ac2); font-weight: 600; }
+  .edu-note { margin-top: 10px; font-size: 11.5px; color: var(--muted); line-height: 1.58; }
+
+  /* ── Footer ── */
+  footer { background: var(--ink); color: #3d5060; text-align: center; padding: 32px; font-size: 12px; letter-spacing: 0.04em; }
+  footer span { color: #6b9dbf; }
+
+  /* ── Responsive ── */
+  @media (max-width: 680px) {
+    .tl-line { display: none; }
+    .tl-item { grid-template-columns: 1fr; }
+    .tl-date { text-align: left; padding-top: 0; margin-bottom: 4px; }
+    .tl-dot-col { display: none; }
+    .metrics-inner { grid-template-columns: 1fr 1fr; }
+    .h-inner { grid-template-columns: 1fr; }
+    .h-meta { text-align: left; }
+    header { padding: 48px 24px 0; }
+    .metrics-strip { padding: 0 24px; }
+    .container { padding: 36px 16px 64px; }
+    .pipeline { grid-template-columns: 1fr 1fr; }
+    .phase:nth-child(5) { grid-column: span 2; border-right: none; }
+    .case-grid, .art-grid { grid-template-columns: 1fr; }
+  }
+</style>
+</head>
+<body>
+
+<!-- HEADER -->
+<header>
+  <div class="h-inner">
+    <div>
+      <div class="eyebrow">Medical Devices &nbsp;&middot;&nbsp; Life Sciences &nbsp;&middot;&nbsp; Regulated Systems &nbsp;&middot;&nbsp; Program Leadership</div>
+      <div class="h-name">Built to<br><span>Deliver.</span><br>Wired to<br>Engineer.</div>
+      <p class="h-sub">Fifteen years bridging regulated medical device engineering and large-scale program delivery. From Medtronic MiniMed insulin pump systems to $55M enterprise portfolios — the engineering discipline has never left the room.</p>
+      <div class="pill-row">
+        <span class="cred-pill">PMP Certified</span>
+        <span class="cred-pill">Lean Six Sigma</span>
+        <span class="cred-pill">ITIL Foundation</span>
+        <span class="cred-pill">AWS Cloud Practitioner</span>
+        <span class="cred-pill">Scrum Product Owner</span>
+        <span class="cred-pill">MS Engineering &middot; CSUN</span>
+      </div>
+      <div class="contact-row">
+        <span class="contact-item">
+          <svg width="13" height="13" fill="none" stroke="currentColor" stroke-width="1.5" viewBox="0 0 24 24"><rect x="2" y="4" width="20" height="16" rx="2"/><path d="m2 7 10 7 10-7"/></svg>
+          lodhiax@gmail.com
+        </span>
+        <span class="contact-item">
+          <svg width="13" height="13" fill="none" stroke="currentColor" stroke-width="1.5" viewBox="0 0 24 24"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07A19.5 19.5 0 0 1 4.15 9.79a19.79 19.79 0 0 1-3-8.54A2 2 0 0 1 3.11 1h3a2 2 0 0 1 2 1.72c.127.96.361 1.903.7 2.81a2 2 0 0 1-.45 2.11L7.09 8.91a16 16 0 0 0 9 9l1.27-1.27a2 2 0 0 1 2.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0 1 22 18.92"/></svg>
+          (510) 557-7700
+        </span>
+        <span class="contact-item">
+          <svg width="13" height="13" fill="none" stroke="currentColor" stroke-width="1.5" viewBox="0 0 24 24"><path d="M20 10c0 6-8 12-8 12s-8-6-8-12a8 8 0 1 1 16 0Z"/><circle cx="12" cy="10" r="3"/></svg>
+          Fremont, CA 94538
+        </span>
+      </div>
+    </div>
+    <div class="h-meta">
+      <a class="ln-btn" href="https://linkedin.com/in/atiflodhi/" target="_blank" rel="noopener">
+        <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433c-1.144 0-2.063-.926-2.063-2.065 0-1.138.92-2.063 2.063-2.063 1.14 0 2.064.925 2.064 2.063 0 1.139-.925 2.065-2.064 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/></svg>
+        Atif Lodhi
+      </a>
+    </div>
+  </div>
+</header>
+
+<!-- METRICS STRIP -->
+<div class="metrics-strip">
+  <div class="metrics-inner">
+    <div class="mc"><div class="mc-num">15+</div><div class="mc-lbl">Years in regulated industries</div></div>
+    <div class="mc"><div class="mc-num">$55M</div><div class="mc-lbl">Portfolio managed</div></div>
+    <div class="mc"><div class="mc-num">10+</div><div class="mc-lbl">Concurrent programs led</div></div>
+    <div class="mc"><div class="mc-num">90%</div><div class="mc-lbl">On-time delivery achieved</div></div>
+  </div>
+</div>
+
+<!-- NAV -->
+<nav>
+  <div class="nav-inner">
+    <a href="#summary">Summary</a>
+    <a href="#impact">Impact</a>
+    <a href="#experience">Experience</a>
+    <a href="#competencies">Competencies</a>
+    <a href="#spotlights">Spotlights</a>
+    <a href="#pmo">PMO Framework</a>
+    <a href="#artifacts">Artifacts</a>
+    <a href="#education">Education</a>
+  </div>
+</nav>
+
+<div class="container">
+
+  <!-- 01 SUMMARY -->
+  <section id="summary">
+    <div class="sec-label"><span class="sec-num">01</span><h2>Summary</h2></div>
+    <div class="sum-banner">
+      <p>Most program leaders spend their careers operating above the technology stack. They coordinate schedules, manage escalations, and rely on technical leads to tell them what is actually happening underneath. My path developed differently.</p>
+      <p>I started in <strong>regulated medical device systems engineering</strong> at <strong>Medtronic MiniMed in Northridge</strong>, working for nearly seven years on continuous glucose monitoring and insulin delivery platforms that were simultaneously electromechanical, embedded, and cloud-connected. In that environment, requirements had to trace all the way to hardware behavior. Interfaces across electrical, mechanical, firmware, and software subsystems had to be explicitly defined and validated. A missed definition was not a schedule inconvenience. It was a regulatory failure. That discipline has shaped how I think ever since.</p>
+      <p>That foundation grew across BD Biosciences IVD diagnostic platforms and Abbott Medical Optics ophthalmic laser systems before expanding into enterprise IS program leadership. Today I carry full accountability for <strong>portfolios exceeding $55M across ten or more concurrent programs</strong>, with on-time delivery consistently at or above 90 percent. What I bring that purely delivery-oriented program managers often cannot is the ability to read architecture and integration risk the way an engineer would. I can sit in a technical review, identify the dependency a vendor has glossed over, and make a governance call grounded in what is actually happening in the stack. That distinction separates managing a program from <strong>truly owning its outcome</strong>.</p>
+      <div class="sum-byline">Atif Lodhi &nbsp;&middot;&nbsp; PMP &nbsp;&middot;&nbsp; Six Sigma &nbsp;&middot;&nbsp; ITIL &nbsp;&middot;&nbsp; Fremont, CA &nbsp;&middot;&nbsp; lodhiax@gmail.com &nbsp;&middot;&nbsp; (510) 557-7700</div>
+    </div>
+  </section>
+
+  <!-- 02 IMPACT -->
+  <section id="impact">
+    <div class="sec-label"><span class="sec-num">02</span><h2>Impact by the numbers</h2></div>
+    <div class="impact-grid">
+      <div class="stat-card">
+        <div class="stat-val">$55M+</div>
+        <div class="stat-lbl">Portfolio under management</div>
+        <div class="stat-note">Across ten or more concurrent IS programs spanning ERP, cloud migration, and enterprise application modernization</div>
+      </div>
+      <div class="stat-card">
+        <div class="stat-val">72 to 90%</div>
+        <div class="stat-lbl">On-time delivery improvement</div>
+        <div class="stat-note">Grown through disciplined PMO governance, sprint planning, and CPI/SPI tracking introduced after taking over the portfolio</div>
+      </div>
+      <div class="stat-card">
+        <div class="stat-val">$1.5M</div>
+        <div class="stat-lbl">Cost savings delivered</div>
+        <div class="stat-note">Through structured cost analysis across the portfolio, alongside an 8 percent reduction in annual operating costs</div>
+      </div>
+      <div class="stat-card">
+        <div class="stat-val">30%</div>
+        <div class="stat-lbl">Reduction in overdue milestones</div>
+        <div class="stat-note">Achieved through disciplined CPI/SPI tracking and structured sprint planning introduced across all active programs</div>
+      </div>
+      <div class="stat-card">
+        <div class="stat-val">25%</div>
+        <div class="stat-lbl">Fewer delivery disruptions</div>
+        <div class="stat-note">Proactive RAID frameworks with structured scoring, owner assignment, and defined escalation paths eliminated recurring blockers</div>
+      </div>
+      <div class="stat-card">
+        <div class="stat-val">50+</div>
+        <div class="stat-lbl">Staff trained and developed</div>
+        <div class="stat-note">Across Agile, Waterfall, and Hybrid delivery practices, reducing average ramp-up time by 25 percent across the team</div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 03 EXPERIENCE -->
+  <section id="experience">
+    <div class="sec-label"><span class="sec-num">03</span><h2>Career timeline</h2></div>
+    <div class="timeline">
+      <div class="tl-line"></div>
+
+      <div class="tl-item">
+        <div class="tl-date">Jun 2016<br>Present</div>
+        <div class="tl-dot-col"><div class="tl-dot"></div></div>
+        <div class="tl-card">
+          <div class="tl-role">Technical Program Manager</div>
+          <div class="tl-co">Creatics Private Limited &nbsp;&middot;&nbsp; Enterprise IS Portfolio</div>
+          <div class="tl-meta">
+            <span class="badge bd-blue">$55M Portfolio</span>
+            <span class="badge bd-blue">10+ Concurrent Programs</span>
+            <span class="badge bd-gray">9 Years</span>
+          </div>
+          <p class="tl-body">The central coordination point across Technical Leadership, Directors, VPs, Dev Managers, Test Managers, and individual Scrum teams for a portfolio that grew to over ten concurrent IS programs. Built PMO operating models and governance frameworks from scratch, standardized how programs were run, and created the portfolio dashboards that gave senior leadership a reliable view of what was actually on track. Supervised eight Project Managers and trained over fifty staff, growing portfolio on-time delivery from 72 to 90 percent while reducing overdue milestones by 30 percent and cutting executive escalations by 35 percent.</p>
+          <div class="tl-tags">
+            <span class="tl-tag">JIRA / Confluence</span>
+            <span class="tl-tag">SAP S/4HANA</span>
+            <span class="tl-tag">Salesforce</span>
+            <span class="tl-tag">AWS Cloud</span>
+            <span class="tl-tag">Workday</span>
+            <span class="tl-tag">PMO Governance</span>
+            <span class="tl-tag">CPI / SPI Tracking</span>
+            <span class="tl-tag">Agile / Scrum</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="tl-item">
+        <div class="tl-date">Feb 2015<br>May 2016</div>
+        <div class="tl-dot-col"><div class="tl-dot"></div></div>
+        <div class="tl-card">
+          <div class="tl-role">Engineering Project Manager</div>
+          <div class="tl-co">Abbott Medical Optics &nbsp;&middot;&nbsp; FDA-Regulated Healthcare Programs</div>
+          <div class="tl-meta">
+            <span class="badge bd-blue">FDA Regulated</span>
+            <span class="badge bd-blue">Ophthalmic Devices</span>
+            <span class="badge bd-gray">1 yr 4 mos</span>
+          </div>
+          <p class="tl-body">Managed complex programs in an FDA-regulated ophthalmic device environment, coordinating software, systems integration, hardware, and validation workstreams across teams of twenty-five or more. Structured project charters, scope documents, and change management processes aligned to compliance requirements. Reduced project delays by 20 percent through structured dependency management and reduced time to market by 15 percent through KPI tracking and sprint optimization.</p>
+          <div class="tl-tags">
+            <span class="tl-tag">FDA Compliance</span>
+            <span class="tl-tag">Ophthalmic Laser Systems</span>
+            <span class="tl-tag">IQ / OQ / PQ Validation</span>
+            <span class="tl-tag">CGMP</span>
+            <span class="tl-tag">FMEA</span>
+            <span class="tl-tag">Requirements Traceability</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="tl-item">
+        <div class="tl-date">Jul 2011<br>Jan 2015</div>
+        <div class="tl-dot-col"><div class="tl-dot"></div></div>
+        <div class="tl-card">
+          <div class="tl-role">Sr. Systems Engineer</div>
+          <div class="tl-co">BD Biosciences &nbsp;&middot;&nbsp; Global Clinical and Manufacturing Platforms</div>
+          <div class="tl-meta">
+            <span class="badge bd-blue">IVD Diagnostics</span>
+            <span class="badge bd-blue">ISO 13485</span>
+            <span class="badge bd-gray">3 yrs 7 mos</span>
+          </div>
+          <p class="tl-body">Led system-level architecture work integrating hardware, firmware, analytics, and cloud-connected services into IVD diagnostic platforms, following INCOSE systems engineering principles throughout. Defined interface specifications across electrical, mechanical, and software subsystems and built data models bridging embedded firmware and cloud analytics. Reduced verification defects by 20 percent through structured traceability frameworks and risk-based test planning aligned to ISO 13485 and ISO 14971.</p>
+          <div class="tl-tags">
+            <span class="tl-tag">BD FACSuite</span>
+            <span class="tl-tag">Flow Cytometry</span>
+            <span class="tl-tag">INCOSE SE</span>
+            <span class="tl-tag">ISO 13485</span>
+            <span class="tl-tag">ISO 14971</span>
+            <span class="tl-tag">LIMS</span>
+            <span class="tl-tag">Design Controls</span>
+            <span class="tl-tag">IBM DOORS</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="tl-item">
+        <div class="tl-date">Jan 2004<br>Jun 2011</div>
+        <div class="tl-dot-col"><div class="tl-dot"></div></div>
+        <div class="tl-card">
+          <div class="tl-role">Systems Engineer</div>
+          <div class="tl-co">Medtronic MiniMed &nbsp;&middot;&nbsp; Northridge, CA &nbsp;&middot;&nbsp; Insulin Pump and CGM Systems</div>
+          <div class="tl-meta">
+            <span class="badge bd-blue">Class III Medical Devices</span>
+            <span class="badge bd-blue">IEC 62304</span>
+            <span class="badge bd-blue">PMA</span>
+            <span class="badge bd-gray">7 Years</span>
+          </div>
+          <p class="tl-body">Nearly seven years working on continuous glucose monitoring and insulin delivery platforms that were simultaneously electromechanical, embedded, and cloud-connected. Owned requirements development, integration testing, defect tracking, and validation documentation across the full SDLC. Managed interface design across hardware, firmware, and software subsystems and contributed directly to PMA regulatory submissions under IEC 62304 and 21 CFR Part 820. Improved cross-team issue resolution cycle time by 15 percent through structured defect tracking and risk prioritization. Mentored junior engineers on documentation standards, design controls, and lifecycle practices.</p>
+          <div class="tl-tags">
+            <span class="tl-tag">MySentry System</span>
+            <span class="tl-tag">CareLink Pro</span>
+            <span class="tl-tag">21 CFR Part 820</span>
+            <span class="tl-tag">DHF / V&V</span>
+            <span class="tl-tag">Embedded Systems</span>
+            <span class="tl-tag">IoT / Connected Device</span>
+            <span class="tl-tag">Reliability Engineering</span>
+            <span class="tl-tag">DVT / DFT</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 04 COMPETENCIES -->
+  <section id="competencies">
+    <div class="sec-label"><span class="sec-num">04</span><h2>Core competencies</h2></div>
+    <div class="comp-wrap">
+      <div class="comp-cluster">
+        <div class="comp-cluster-title">Medical Devices and Life Sciences</div>
+        <div class="comp-item"><span class="comp-dot"></span>Class II / III Device Program Leadership</div>
+        <div class="comp-item"><span class="comp-dot"></span>FDA 21 CFR Part 820 / QSR</div>
+        <div class="comp-item"><span class="comp-dot"></span>Design Controls and DHF Management</div>
+        <div class="comp-item"><span class="comp-dot"></span>IEC 62304 Software Lifecycle</div>
+        <div class="comp-item"><span class="comp-dot"></span>ISO 13485 / ISO 14971</div>
+        <div class="comp-item"><span class="comp-dot"></span>V&amp;V Planning and Execution (IQ/OQ/PQ)</div>
+        <div class="comp-item"><span class="comp-dot"></span>PMA Submission Support</div>
+      </div>
+      <div class="comp-cluster">
+        <div class="comp-cluster-title">Systems and Platform Engineering</div>
+        <div class="comp-item"><span class="comp-dot"></span>INCOSE Systems Engineering</div>
+        <div class="comp-item"><span class="comp-dot"></span>HW / FW / SW Integration</div>
+        <div class="comp-item"><span class="comp-dot"></span>Connected Device and IoT Architecture</div>
+        <div class="comp-item"><span class="comp-dot"></span>Requirements Traceability (DOORS / Jama)</div>
+        <div class="comp-item"><span class="comp-dot"></span>FMEA and Risk-Based Test Planning</div>
+        <div class="comp-item"><span class="comp-dot"></span>Bioinformatics and Clinical Platforms</div>
+        <div class="comp-item"><span class="comp-dot"></span>LIMS and Laboratory Systems</div>
+      </div>
+      <div class="comp-cluster">
+        <div class="comp-cluster-title">Program and PMO Leadership</div>
+        <div class="comp-item"><span class="comp-dot"></span>Portfolio and Program Management</div>
+        <div class="comp-item"><span class="comp-dot"></span>PMO Design and Governance</div>
+        <div class="comp-item"><span class="comp-dot"></span>Agile, Scrum, Waterfall, and Hybrid</div>
+        <div class="comp-item"><span class="comp-dot"></span>RAID Frameworks and Risk Management</div>
+        <div class="comp-item"><span class="comp-dot"></span>Budget and CPI/SPI Financial Tracking</div>
+        <div class="comp-item"><span class="comp-dot"></span>Multi-Vendor and Contract Management</div>
+        <div class="comp-item"><span class="comp-dot"></span>Executive Stakeholder Communication</div>
+      </div>
+      <div class="comp-cluster">
+        <div class="comp-cluster-title">Enterprise Technology</div>
+        <div class="comp-item"><span class="comp-dot"></span>SAP S/4HANA and ERP Implementation</div>
+        <div class="comp-item"><span class="comp-dot"></span>AWS Cloud Migration</div>
+        <div class="comp-item"><span class="comp-dot"></span>Salesforce / Workday / Oracle</div>
+        <div class="comp-item"><span class="comp-dot"></span>Lean Six Sigma Process Improvement</div>
+        <div class="comp-item"><span class="comp-dot"></span>Power BI Dashboards and Analytics</div>
+        <div class="comp-item"><span class="comp-dot"></span>Jira / Confluence / MS Project</div>
+        <div class="comp-item"><span class="comp-dot"></span>BPM Platform Engineering</div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 05 SPOTLIGHTS -->
+  <section id="spotlights">
+    <div class="sec-label"><span class="sec-num">05</span><h2>Program spotlights</h2></div>
+    <div class="case-grid">
+
+      <div class="case-card">
+        <div class="case-accent"></div>
+        <div class="case-body">
+          <div class="case-hd"><div class="case-icon">&#129488;</div><span class="badge bd-dark">Medical Devices</span></div>
+          <div class="case-title">Decoupling integration from development to clear an FDA V&amp;V submission</div>
+          <div class="cb-label prob">The problem</div>
+          <p class="cb-p">A closed-loop surgical instrument simulator was stalling because integration work was sequenced to wait on full subsystem completion. With hardware, firmware, and software workstreams advancing at different rates, integration was perpetually last and always late. The stakes were more than schedule — the simulator's output was the V&amp;V data earmarked for FDA submission.</p>
+          <div class="cb-divider"></div>
+          <div class="cb-label appr">What moved it</div>
+          <p class="cb-p">The WBS was redesigned to give the integration workstream independent entry points at each development phase, enabling parallel validation against partial builds. Engineering report release cycles were tightened so that design outputs, verification evidence, and technical documentation were produced and approved in phase with milestones rather than assembled after the fact.</p>
+          <div class="cb-divider"></div>
+          <div class="cb-label outc">Outcome</div>
+          <div class="cb-outcome"><p>Integration bottlenecks were eliminated as a source of schedule risk. The simulator validation completed on cycle and produced the V&amp;V data package that supported the FDA submission directly. The WBS structure and release governance model became the repeatable framework the engineering team carried into subsequent programs.</p></div>
+        </div>
+      </div>
+
+      <div class="case-card">
+        <div class="case-accent"></div>
+        <div class="case-body">
+          <div class="case-hd"><div class="case-icon">&#129516;</div><span class="badge bd-dark">Life Sciences IS</span></div>
+          <div class="case-title">Bringing real visibility to a $20M portfolio with more than twenty concurrent initiatives</div>
+          <div class="cb-label prob">The problem</div>
+          <p class="cb-p">A digital transformation portfolio had grown to over twenty concurrent initiatives spanning cloud migration, lean process optimization, manufacturing software, and infrastructure upgrades. There was no centralized view, no standardized risk tracking, and no reliable signal reaching executive leadership on what was genuinely on track.</p>
+          <div class="cb-divider"></div>
+          <div class="cb-label appr">What moved it</div>
+          <p class="cb-p">A tiered portfolio governance structure was designed and implemented from the ground up. A master dashboard in Power BI aggregated CPI, SPI, risk exposure, and capacity utilization. A standardized RAID log format was introduced and enforced across all project managers. Governance rhythms were established at three levels: weekly PM syncs, bi-weekly steering reviews, and monthly executive scorecards.</p>
+          <div class="cb-divider"></div>
+          <div class="cb-label outc">Outcome</div>
+          <div class="cb-outcome"><p>Delivery predictability improved by 30 percent. Three underperforming projects were flagged and course-corrected before missing critical milestones. Executive confidence in the portfolio increased measurably, with expanded program scope approved in the following fiscal planning cycle.</p></div>
+        </div>
+      </div>
+
+      <div class="case-card">
+        <div class="case-accent"></div>
+        <div class="case-body">
+          <div class="case-hd"><div class="case-icon">&#128300;</div><span class="badge bd-dark">Clinical Systems</span></div>
+          <div class="case-title">Converting four disconnected intake channels into one governed system of record</div>
+          <div class="cb-label prob">The problem</div>
+          <p class="cb-p">Operations ran entirely on institutional knowledge. Work arrived from four structurally different sources, each managed through informal, experience-dependent methods. There was no unified intake, no consistent routing logic, no step-level performance data, and no way to know how long any process actually took or where it stalled.</p>
+          <div class="cb-divider"></div>
+          <div class="cb-label appr">What moved it</div>
+          <p class="cb-p">The system was designed around the process architecture first, not the technology. Each input channel was mapped and formalized with entry criteria, decision logic, approval protocols, and conditions defining each of ten outcome states. The guiding principle was instrumentation before optimization: make every step visible and measurable, then let the data drive improvement.</p>
+          <div class="cb-divider"></div>
+          <div class="cb-label outc">Outcome</div>
+          <div class="cb-outcome"><p>Four previously disconnected channels were unified under a single system of record with consistent governance. Ten outcome pathways were made protocol-driven, removing individual judgment as a dependency for the first time. Every process step was instrumented with time and ownership data, giving the organization a measurable operational baseline it had never previously held.</p></div>
+        </div>
+      </div>
+
+      <div class="case-card">
+        <div class="case-accent"></div>
+        <div class="case-body">
+          <div class="case-hd"><div class="case-icon">&#127973;</div><span class="badge bd-dark">Healthcare IT</span></div>
+          <div class="case-title">Recovering a $30M program six months off track without expanding the budget</div>
+          <div class="cb-label prob">The problem</div>
+          <p class="cb-p">A major enterprise migration had drifted six months behind schedule. Vendor timelines were misaligned across workstreams, there was no single source of truth on risks, and executive confidence had quietly collapsed well before the situation was formally acknowledged.</p>
+          <div class="cb-divider"></div>
+          <div class="cb-label appr">What moved it</div>
+          <p class="cb-p">Delivery governance was restructured from scratch. Consolidated RAID logs, introduced a dependency map that made cross-workstream blockers visible for the first time, and established a steering cadence that gave leadership genuine signal rather than status updates carefully worded to obscure the real picture.</p>
+          <div class="cb-divider"></div>
+          <div class="cb-label outc">Outcome</div>
+          <div class="cb-outcome"><p>The program recovered to green status within twelve weeks without a budget increase or scope reduction. Executive sponsorship was fully restored and the migration completed on the revised plan.</p></div>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- 06 PMO FRAMEWORK -->
+  <section id="pmo">
+    <div class="sec-label"><span class="sec-num">06</span><h2>PMO framework</h2></div>
+    <div class="pmo-intro">
+      <p>This is a structured end-to-end framework governing the full project lifecycle, covering everything from initial intake and portfolio prioritization through charter approval, staffing, execution, and delivery. It is built around PMBOK performance domains and integrates governance workflows, scoring models, and delivery systems to produce consistent, measurable outcomes across programs. Click any phase to explore the activities, artifacts, and governance controls applied at each stage.</p>
+    </div>
+    <div class="pipeline" id="pipeline">
+      <div class="phase active" onclick="selectPhase(0)">
+        <div class="phase-num">01</div>
+        <div class="phase-title">Project Intake</div>
+        <div class="phase-sub">Requests and automation</div>
+      </div>
+      <div class="phase" onclick="selectPhase(1)">
+        <div class="phase-num">02</div>
+        <div class="phase-title">Evaluation</div>
+        <div class="phase-sub">Scoring and portfolio</div>
+      </div>
+      <div class="phase" onclick="selectPhase(2)">
+        <div class="phase-num">03</div>
+        <div class="phase-title">Approval</div>
+        <div class="phase-sub">Review board and workflow</div>
+      </div>
+      <div class="phase" onclick="selectPhase(3)">
+        <div class="phase-num">04</div>
+        <div class="phase-title">Charter</div>
+        <div class="phase-sub">Sign-off and activation</div>
+      </div>
+      <div class="phase" onclick="selectPhase(4)">
+        <div class="phase-num">05</div>
+        <div class="phase-title">Execution</div>
+        <div class="phase-sub">Tracking and closure</div>
+      </div>
+    </div>
+    <div class="detail-panel" id="detail-panel"></div>
+    <div class="ps-label" style="margin-bottom: 14px;">PMBOK performance domains applied across all programs</div>
+    <div class="domains-grid">
+      <div class="domain-card"><div class="dc-title">Stakeholder</div><div class="dc-sub">Business cases, communications, stakeholder registers, user stories</div></div>
+      <div class="domain-card"><div class="dc-title">Team</div><div class="dc-sub">Project calendars, activity lists, resource and capacity planning</div></div>
+      <div class="domain-card"><div class="dc-title">Development and life cycle</div><div class="dc-sub">Milestone mapping, roadmap monitoring, predictive and adaptive methods</div></div>
+      <div class="domain-card"><div class="dc-title">Planning</div><div class="dc-sub">WBS, Gantt charts, burndown, schedule and budget management</div></div>
+      <div class="domain-card"><div class="dc-title">Project work</div><div class="dc-sub">Resource management, baselines, knowledge management, issue logging</div></div>
+      <div class="domain-card"><div class="dc-title">Delivery</div><div class="dc-sub">WBS, velocity planning, user stories, definition of done, reporting</div></div>
+      <div class="domain-card"><div class="dc-title">Measurement</div><div class="dc-sub">Milestone reporting, budget and time tracking, Gantt and burndown analysis</div></div>
+      <div class="domain-card"><div class="dc-title">Uncertainty</div><div class="dc-sub">Risk registers, RAID logs, issue tracking, assumption and dependency management</div></div>
+    </div>
+  </section>
+
+  <!-- 07 DESIGN CONTROL ARTIFACTS -->
+  <section id="artifacts">
+    <div class="sec-label"><span class="sec-num">07</span><h2>Design control artifacts</h2></div>
+    <div class="art-grid">
+
+      <div class="art-card">
+        <div class="art-top"><div class="art-icon">&#128196;</div><span class="badge bd-dark">Design Input</span></div>
+        <div class="art-title">System Requirements Document</div>
+        <div class="art-desc">Defines the system-level functional and performance requirements the device must meet. Captures stakeholder needs, intended use, user needs, and design inputs per 21 CFR Part 820.30(c) and ISO 13485 design control requirements.</div>
+        <div class="art-reflect">The foundation of the design control process. Every downstream design output, test, and verification activity must trace back to this document.</div>
+        <div class="art-foot">
+          <a class="dl-btn" href="https://github.com/lodhiax/delivery-playbook/raw/main/docs/SRD.pdf" target="_blank" rel="noopener">
+            <svg viewBox="0 0 24 24"><path d="M12 16l-6-6h4V4h4v6h4l-6 6zm-7 4h14v-2H5v2z"/></svg>SRD
+          </a>
+        </div>
+      </div>
+
+      <div class="art-card">
+        <div class="art-top"><div class="art-icon">&#128187;</div><span class="badge bd-dark">Design Input</span></div>
+        <div class="art-title">Software Requirements Document</div>
+        <div class="art-desc">Specifies software functional and non-functional requirements per IEC 62304. Defines software items, interfaces, safety classifications, and performance criteria. Serves as the binding input for software architecture design and unit-level testing.</div>
+        <div class="art-reflect">Drives the IEC 62304 software development lifecycle from architecture through unit and integration testing. Auditors expect this to be traceable in both directions.</div>
+        <div class="art-foot">
+          <a class="dl-btn" href="https://github.com/lodhiax/delivery-playbook/raw/main/docs/SRS.pdf" target="_blank" rel="noopener">
+            <svg viewBox="0 0 24 24"><path d="M12 16l-6-6h4V4h4v6h4l-6 6zm-7 4h14v-2H5v2z"/></svg>SRD-SW
+          </a>
+        </div>
+      </div>
+
+      <div class="art-card">
+        <div class="art-top"><div class="art-icon">&#128203;</div><span class="badge bd-dark">Traceability</span></div>
+        <div class="art-title">Requirements Traceability Matrix</div>
+        <div class="art-desc">Bidirectional traceability linking user needs through system requirements, software requirements, design outputs, verification tests, and validation evidence. The single artifact that demonstrates completeness of the design control chain to FDA and notified bodies.</div>
+        <div class="art-reflect">Critical for 510(k) and PMA submissions. Auditors inspect this first to confirm every requirement is tested and every test is justified by a requirement.</div>
+        <div class="art-foot">
+          <a class="dl-btn" href="https://github.com/lodhiax/delivery-playbook/raw/main/docs/RTM.xlsx" target="_blank" rel="noopener">
+            <svg viewBox="0 0 24 24"><path d="M12 16l-6-6h4V4h4v6h4l-6 6zm-7 4h14v-2H5v2z"/></svg>RTM
+          </a>
+        </div>
+      </div>
+
+      <div class="art-card">
+        <div class="art-top"><div class="art-icon">&#127775;</div><span class="badge bd-dark">Phase Gate</span></div>
+        <div class="art-title">Phase Gate Exit Review</div>
+        <div class="art-desc">Formal design review deck presented at each phase gate — Concept, Feasibility, Development, Verification, Validation, and Transfer. Documents exit criteria status, open actions, risk posture, and the go or no-go recommendation per 21 CFR 820.30(e).</div>
+        <div class="art-reflect">The governance checkpoint that keeps design programs on track. No phase advances without resolved open items and documented approval from the review board.</div>
+        <div class="art-foot">
+          <a class="dl-btn" href="https://github.com/lodhiax/delivery-playbook/raw/main/docs/PhaseGate.pdf" target="_blank" rel="noopener">
+            <svg viewBox="0 0 24 24"><path d="M12 16l-6-6h4V4h4v6h4l-6 6zm-7 4h14v-2H5v2z"/></svg>Gate Review
+          </a>
+        </div>
+      </div>
+
+      <div class="art-card">
+        <div class="art-top"><div class="art-icon">&#9888;&#65039;</div><span class="badge bd-dark">Risk Management</span></div>
+        <div class="art-title">Risk Management File</div>
+        <div class="art-desc">End-to-end risk management documentation per ISO 14971 — covering hazard identification, probability and severity scoring, risk controls, residual risk evaluation, and benefit-risk analysis. Maintained as a living file throughout the product lifecycle.</div>
+        <div class="art-reflect">Required for all medical device submissions. Demonstrates systematic harm prevention and that residual risk has been evaluated and accepted appropriately.</div>
+        <div class="art-foot">
+          <a class="dl-btn" href="https://github.com/lodhiax/delivery-playbook/raw/main/docs/RMF.pdf" target="_blank" rel="noopener">
+            <svg viewBox="0 0 24 24"><path d="M12 16l-6-6h4V4h4v6h4l-6 6zm-7 4h14v-2H5v2z"/></svg>RMF
+          </a>
+        </div>
+      </div>
+
+      <div class="art-card">
+        <div class="art-top"><div class="art-icon">&#9989;</div><span class="badge bd-dark">Verification</span></div>
+        <div class="art-title">Verification and Validation Plan</div>
+        <div class="art-desc">Defines the V&amp;V strategy, test methods, acceptance criteria, responsible parties, and schedule for confirming design outputs meet design inputs — verification — and that the finished device meets user needs — validation — per 21 CFR 820.30(f) and (g).</div>
+        <div class="art-reflect">Keeps verification and validation clearly separated. Conflating the two is one of the most common FDA audit findings in software-intensive device programs.</div>
+        <div class="art-foot">
+          <a class="dl-btn" href="https://github.com/lodhiax/delivery-playbook/raw/main/docs/VVPlan.pdf" target="_blank" rel="noopener">
+            <svg viewBox="0 0 24 24"><path d="M12 16l-6-6h4V4h4v6h4l-6 6zm-7 4h14v-2H5v2z"/></svg>V&amp;V Plan
+          </a>
+        </div>
+      </div>
+
+      <div class="art-card">
+        <div class="art-top"><div class="art-icon">&#128203;</div><span class="badge bd-dark">Validation</span></div>
+        <div class="art-title">IQ / OQ / PQ Protocol and Report</div>
+        <div class="art-desc">Installation Qualification, Operational Qualification, and Performance Qualification protocols with executed test scripts and summary reports. Required for software systems, manufacturing equipment, and test equipment used in the production or testing of medical devices.</div>
+        <div class="art-reflect">Standard expectation in ISO 13485-registered and GxP-regulated environments. Demonstrates that the production environment is qualified, controlled, and consistently performing.</div>
+        <div class="art-foot">
+          <a class="dl-btn" href="https://github.com/lodhiax/delivery-playbook/raw/main/docs/IQOQPQ.pdf" target="_blank" rel="noopener">
+            <svg viewBox="0 0 24 24"><path d="M12 16l-6-6h4V4h4v6h4l-6 6zm-7 4h14v-2H5v2z"/></svg>IQ/OQ/PQ
+          </a>
+        </div>
+      </div>
+
+      <div class="art-card">
+        <div class="art-top"><div class="art-icon">&#128296;</div><span class="badge bd-dark">Architecture</span></div>
+        <div class="art-title">Software Architecture Document</div>
+        <div class="art-desc">Describes software architecture, system interfaces, data flows, module decomposition, and design decisions for regulated software per IEC 62304 Section 5.3. Maps software items to safety classifications and defines the integration strategy across subsystems.</div>
+        <div class="art-reflect">The technical backbone of the software design file. Required by IEC 62304 and reviewed in software audits by FDA and notified bodies to confirm architectural rigor.</div>
+        <div class="art-foot">
+          <a class="dl-btn" href="https://github.com/lodhiax/delivery-playbook/raw/main/docs/SAD.pdf" target="_blank" rel="noopener">
+            <svg viewBox="0 0 24 24"><path d="M12 16l-6-6h4V4h4v6h4l-6 6zm-7 4h14v-2H5v2z"/></svg>SAD
+          </a>
+        </div>
+      </div>
+
+      <div class="art-card">
+        <div class="art-top"><div class="art-icon">&#128027;</div><span class="badge bd-dark">Defect Management</span></div>
+        <div class="art-title">Anomaly and Defect Tracking Log</div>
+        <div class="art-desc">Structured log of software anomalies and defects identified during verification and validation, including severity classification, root cause, resolution, and regression test status. Required by IEC 62304 Section 5.6 for software problem resolution.</div>
+        <div class="art-reflect">Demonstrates controlled handling of defects throughout the development lifecycle. Particularly critical for Class B and Class C software items under IEC 62304.</div>
+        <div class="art-foot">
+          <a class="dl-btn" href="https://github.com/lodhiax/delivery-playbook/raw/main/docs/AnomalyLog.xlsx" target="_blank" rel="noopener">
+            <svg viewBox="0 0 24 24"><path d="M12 16l-6-6h4V4h4v6h4l-6 6zm-7 4h14v-2H5v2z"/></svg>Anomaly Log
+          </a>
+        </div>
+      </div>
+
+      <div class="art-card">
+        <div class="art-top"><div class="art-icon">&#128737;&#65039;</div><span class="badge bd-dark">CAPA</span></div>
+        <div class="art-title">CAPA Report</div>
+        <div class="art-desc">Corrective and Preventive Action documentation covering problem identification, root cause analysis using fishbone, 5-Why, or fault tree methods, action plan, effectiveness verification, and formal closure. Required by 21 CFR 820.100 and ISO 13485 Section 8.5.</div>
+        <div class="art-reflect">One of the most scrutinized records in any FDA inspection. A well-structured CAPA with demonstrated effectiveness check signals a mature, functioning quality management system.</div>
+        <div class="art-foot">
+          <a class="dl-btn" href="https://github.com/lodhiax/delivery-playbook/raw/main/docs/CAPA.pdf" target="_blank" rel="noopener">
+            <svg viewBox="0 0 24 24"><path d="M12 16l-6-6h4V4h4v6h4l-6 6zm-7 4h14v-2H5v2z"/></svg>CAPA
+          </a>
+        </div>
+      </div>
+
+      <div class="art-card">
+        <div class="art-top"><div class="art-icon">&#128193;</div><span class="badge bd-dark">Design History</span></div>
+        <div class="art-title">Design History File Index</div>
+        <div class="art-desc">Master index of the Design History File cataloguing all design control records — user needs, design inputs, design outputs, design reviews, verification, validation, and design transfer documents — organized per 21 CFR 820.30(j).</div>
+        <div class="art-reflect">An FDA investigator reviews this first. A clean, complete, well-organized DHF index signals a controlled design process before a single underlying document is opened.</div>
+        <div class="art-foot">
+          <a class="dl-btn" href="https://github.com/lodhiax/delivery-playbook/raw/main/docs/DHF_Index.pdf" target="_blank" rel="noopener">
+            <svg viewBox="0 0 24 24"><path d="M12 16l-6-6h4V4h4v6h4l-6 6zm-7 4h14v-2H5v2z"/></svg>DHF Index
+          </a>
+        </div>
+      </div>
+
+      <div class="art-card">
+        <div class="art-top"><div class="art-icon">&#128260;</div><span class="badge bd-dark">Design Transfer</span></div>
+        <div class="art-title">Design Transfer Plan</div>
+        <div class="art-desc">Documents the transition of the design from R&amp;D to manufacturing — covering production procedures, Device Master Record readiness, manufacturing process validation, training, and transfer acceptance criteria per 21 CFR 820.30(h).</div>
+        <div class="art-reflect">Often the most underdocumented phase of a device program. A robust transfer plan prevents the post-market quality escapes and production nonconformances that trace back to incomplete handoffs from engineering.</div>
+        <div class="art-foot">
+          <a class="dl-btn" href="https://github.com/lodhiax/delivery-playbook/raw/main/docs/DesignTransfer.pdf" target="_blank" rel="noopener">
+            <svg viewBox="0 0 24 24"><path d="M12 16l-6-6h4V4h4v6h4l-6 6zm-7 4h14v-2H5v2z"/></svg>Transfer Plan
+          </a>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- 08 EDUCATION -->
+  <section id="education">
+    <div class="sec-label"><span class="sec-num">08</span><h2>Education</h2></div>
+    <div class="edu-grid">
+      <div class="edu-card">
+        <div class="edu-deg">Master of Science</div>
+        <div class="edu-field">Computer and Electrical Engineering</div>
+        <div class="edu-school">California State University, Northridge</div>
+        <div class="edu-note">Graduate study in signal processing, embedded systems, and control theory. The technical foundation behind the hardware, firmware, and software integration work that runs through every phase of the medical device career and into systems engineering practice today.</div>
+      </div>
+      <div class="edu-card">
+        <div class="edu-deg">Bachelor of Engineering</div>
+        <div class="edu-field">Electrical and Electronics Engineering</div>
+        <div class="edu-school">NED University of Engineering and Technology</div>
+        <div class="edu-note">Core engineering training in circuits, systems, and electronics. The undergraduate foundation for a career spanning electromechanical platforms, embedded systems, and large-scale systems integration across regulated industries.</div>
+      </div>
+    </div>
+  </section>
+
+</div>
+
+<footer>
+  <span>Atif Lodhi</span> &nbsp;&middot;&nbsp; Medical Devices &nbsp;&middot;&nbsp; Life Sciences &nbsp;&middot;&nbsp; Program Leadership &nbsp;&middot;&nbsp; lodhiax@gmail.com
+</footer>
+
+<script>
+const phases = [
+  {
+    icon: "📥", tag: "Intake",
+    lbl: "Phase 01 — Project intake",
+    title: "Project request submission",
+    body: "Clients submit project requests through a structured intake process using customized project request forms. Each submission captures project type, scope, goals, organizational risks, ROI, and stakeholder information. Automation rules fire on submission, triggering notifications and routing the request into the appropriate approval workflow.",
+    artifacts: ["Project Request Form", "Client Portal Submission", "Project Type Definition", "Automation Rules", "Workflow Trigger"],
+    gov: ["Goals Documentation", "Organizational Risks", "ROI and Benefits Capture"]
+  },
+  {
+    icon: "📊", tag: "Evaluation",
+    lbl: "Phase 02 — Evaluation and scoring",
+    title: "Prioritization and portfolio analysis",
+    body: "Submitted requests are evaluated using project request scorecards and portfolio planning reports. The Priority Matrix compares requests across payback period, risk, and composite score. A Budget and Capacity Planner enables what-if scenario analysis alongside the live portfolio, supporting data-driven investment decisions.",
+    artifacts: ["Request Scorecard", "Priority Matrix Report", "Scoring Model (NPV / IRR)", "Budget and Capacity Planner", "Portfolio Report"],
+    gov: ["NPV / IRR Analysis", "Composite Scoring", "Portfolio Risk View"]
+  },
+  {
+    icon: "✅", tag: "Governance",
+    lbl: "Phase 03 — Approval and governance",
+    title: "Review board and workflow governance",
+    body: "The PMO Officer assigns requests to approval workflows and may edit request details at any step. Each workflow step defines what the reviewer can approve, reject, or escalate. Rejecting a step returns the request to the originator with notification. Approved requests proceed to charter and declined requests trigger automated notification to the creator.",
+    artifacts: ["Workflow Template", "Approval Step Configuration", "Rejection Notification", "Workflow Audit Trail"],
+    gov: ["PMO Officer Oversight", "Step-level Permissions", "Escalation and Routing Rules"]
+  },
+  {
+    icon: "📋", tag: "Charter",
+    lbl: "Phase 04 — Charter and kick-off",
+    title: "Project charter approval and activation",
+    body: "Approved requests are staffed and converted to active projects. Projects begin inactive and are formally activated by the PMO Officer. Project charters cover start and end dates, time and expense budgets, description, requirements, stakeholders, goals, risks, and benefits. Charter approval gates the kickoff meeting and formal project launch.",
+    artifacts: ["Project Charter", "Start and End Dates", "Time and Expense Budget", "Stakeholder Register", "Requirements Document", "Kickoff Agenda"],
+    gov: ["PMO Activation Gate", "Charter Sign-off", "Scope Baseline", "Budget Baseline"]
+  },
+  {
+    icon: "🚀", tag: "Execution",
+    lbl: "Phase 05 — Execution and delivery",
+    title: "Plans, tracking, and project closure",
+    body: "Projects are delivered through Waterfall or Agile plans depending on context. Gantt charts, burndown charts, and backlog management support scheduling and velocity tracking. Risks are monitored in the RAID log and issues are logged and escalated as needed. Time, expense, and budget performance are tracked continuously through to closure with a final Definition of Done review.",
+    artifacts: ["Project Plan (Gantt or Agile)", "RAID Log", "Issue Log", "Burndown Chart", "Time and Expense Tracking", "Status Reports", "Definition of Done"],
+    gov: ["Baseline Management", "Resource Capacity Planning", "Milestone Sign-off", "Closure Review"]
+  }
+];
+
+function selectPhase(i) {
+  document.querySelectorAll('.phase').forEach((p, j) => p.classList.toggle('active', j === i));
+  const d = phases[i];
+  document.getElementById('detail-panel').innerHTML = `
+    <div class="dp-header">
+      <div class="dp-icon">${d.icon}</div>
+      <div style="flex:1">
+        <div class="dp-phase-lbl">${d.lbl}</div>
+        <div class="dp-title">${d.title}</div>
+      </div>
+      <span class="badge bd-dark">${d.tag}</span>
+    </div>
+    <div class="dp-body">${d.body}</div>
+    <div class="ps-label">Key artifacts</div>
+    <div class="pill-list" style="margin-bottom:14px">${d.artifacts.map(a => `<span class="pill">${a}</span>`).join('')}</div>
+    <div class="ps-label">Governance and controls</div>
+    <div class="pill-list">${d.gov.map(g => `<span class="pill gov">${g}</span>`).join('')}</div>
+  `;
+}
+
+selectPhase(0);
+</script>
+</body>
+</html>
