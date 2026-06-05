@@ -368,6 +368,47 @@
   .dl-btn:hover { background: var(--ink2); }
   .dl-btn svg { width: 12px; height: 12px; fill: currentColor; }
 
+  /* ── Products section ── */
+  .prod-intro { background: var(--white); border: 1px solid var(--rule); border-radius: 10px; padding: 24px 28px; margin-bottom: 24px; }
+  .prod-intro p { font-size: 13.5px; color: #4b5563; line-height: 1.78; }
+  .prod-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(290px, 1fr)); gap: 14px; }
+  .prod-card {
+    background: var(--white);
+    border: 1px solid var(--rule);
+    border-radius: 10px;
+    overflow: hidden;
+    display: flex; flex-direction: column;
+    transition: transform 0.2s, box-shadow 0.2s;
+  }
+  .prod-card:hover { transform: translateY(-2px); box-shadow: 0 6px 22px rgba(0,0,0,0.07); }
+  .prod-header {
+    background: var(--ink);
+    padding: 18px 20px;
+    display: flex; align-items: flex-start; gap: 14px;
+  }
+  .prod-company-badge {
+    font-size: 9px; letter-spacing: 0.14em; text-transform: uppercase;
+    color: #6b9dbf; font-weight: 700; margin-bottom: 5px;
+  }
+  .prod-name { font-family: 'Playfair Display', serif; font-size: 14px; font-weight: 700; color: #fff; line-height: 1.3; }
+  .prod-type { font-size: 10px; color: #6b9dbf; margin-top: 4px; line-height: 1.35; }
+  .prod-icon-box {
+    width: 38px; height: 38px; flex-shrink: 0;
+    background: rgba(74,127,165,0.2);
+    border: 1px solid rgba(107,157,191,0.25);
+    border-radius: 8px;
+    display: flex; align-items: center; justify-content: center;
+    font-size: 17px;
+  }
+  .prod-body { padding: 16px 20px; flex: 1; display: flex; flex-direction: column; gap: 10px; }
+  .prod-desc { font-size: 12.5px; color: #4b5563; line-height: 1.72; }
+  .prod-role-label { font-size: 9px; letter-spacing: 0.12em; text-transform: uppercase; color: var(--ac2); font-weight: 700; margin-bottom: 5px; }
+  .prod-contributions { list-style: none; display: flex; flex-direction: column; gap: 5px; }
+  .prod-contributions li { font-size: 12px; color: #4b5563; line-height: 1.6; padding-left: 14px; position: relative; }
+  .prod-contributions li::before { content: '›'; position: absolute; left: 0; color: var(--ac); font-weight: 700; }
+  .prod-footer { padding: 12px 20px; border-top: 1px solid var(--rule); display: flex; flex-wrap: wrap; gap: 5px; }
+  .prod-tag { font-size: 10px; background: var(--ac-light); color: #2c3e52; padding: 2px 8px; border-radius: 3px; font-weight: 500; }
+
   /* ── Education ── */
   .edu-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(270px, 1fr)); gap: 13px; }
   .edu-card { background: var(--white); border: 1px solid var(--rule); border-radius: 10px; padding: 22px 24px; transition: border-color 0.2s; }
@@ -456,11 +497,13 @@
     <a href="#summary">Summary</a>
     <a href="#impact">Impact</a>
     <a href="#experience">Experience</a>
+    <a href="#products">Products</a>
     <a href="#competencies">Competencies</a>
     <a href="#spotlights">Spotlights</a>
     <a href="#pmo">PMO Framework</a>
     <a href="#artifacts">Artifacts</a>
     <a href="#education">Education</a>
+    <a href="#technology">Technology</a>
   </div>
 </nav>
 
@@ -489,12 +532,12 @@
       <div class="stat-card">
         <div class="stat-val">72 to 90%</div>
         <div class="stat-lbl">On-time delivery improvement</div>
-        <div class="stat-note">Grown through disciplined PMO governance, sprint planning, and CPI/SPI tracking introduced after taking over the portfolio</div>
+        <div class="stat-note">Grown through disciplined earned value management, Integrated Master Scheduling, and CPI/SPI tracking that also improved schedule predictability by 22 percent</div>
       </div>
       <div class="stat-card">
         <div class="stat-val">$1.5M</div>
         <div class="stat-lbl">Cost savings delivered</div>
-        <div class="stat-note">Through structured cost analysis across the portfolio, alongside an 8 percent reduction in annual operating costs</div>
+        <div class="stat-note">Through structured cost analysis and earned value tracking that reduced cost variance by 18 percent, alongside an 8 percent reduction in annual operating costs</div>
       </div>
       <div class="stat-card">
         <div class="stat-val">30%</div>
@@ -531,16 +574,19 @@
             <span class="badge bd-blue">10+ Concurrent Programs</span>
             <span class="badge bd-gray">9 Years</span>
           </div>
-          <p class="tl-body">The central coordination point across Technical Leadership, Directors, VPs, Dev Managers, Test Managers, and individual Scrum teams for a portfolio that grew to over ten concurrent IS programs. Built PMO operating models and governance frameworks from scratch, standardized how programs were run, and created the portfolio dashboards that gave senior leadership a reliable view of what was actually on track. Supervised eight Project Managers and trained over fifty staff, growing portfolio on-time delivery from 72 to 90 percent while reducing overdue milestones by 30 percent and cutting executive escalations by 35 percent.</p>
+          <p class="tl-body">Led complex, multi-phase engineering development programs across hardware, firmware, software, quality, and manufacturing disciplines, covering the full lifecycle from proposal support and cost estimation through system architecture definition, formal design reviews (SRR, PDR, CDR), qualification testing, and manufacturing transfer. Owned program financial performance including annual operating budgets exceeding $12M, applying CPI and SPI tracking with earned value principles that reduced cost variance by 18 percent and improved schedule predictability by 22 percent. Developed and managed Integrated Master Schedules in Microsoft Project with over one thousand interdependent tasks, aligning engineering milestones with procurement lead times and production readiness gates. Partnered with manufacturing and supply chain to implement Design for Manufacturing and supplier qualification processes, reducing first-pass yield failures by 15 percent. Built PMO operating models and governance frameworks from scratch, institutionalizing Change Control Boards, risk review boards, and phase-gate approvals that reduced unplanned scope growth by 25 percent and cut executive escalations by 35 percent. Supervised eight Project Managers and trained over fifty staff, growing portfolio on-time delivery from 72 to 90 percent.</p>
           <div class="tl-tags">
+            <span class="tl-tag">Integrated Master Schedule (IMS)</span>
+            <span class="tl-tag">MS Project</span>
+            <span class="tl-tag">SRR / PDR / CDR</span>
+            <span class="tl-tag">Design for Manufacturing (DFM)</span>
+            <span class="tl-tag">Earned Value (CPI/SPI)</span>
+            <span class="tl-tag">Change Control Board (CCB)</span>
             <span class="tl-tag">JIRA / Confluence</span>
             <span class="tl-tag">SAP S/4HANA</span>
-            <span class="tl-tag">Salesforce</span>
             <span class="tl-tag">AWS Cloud</span>
-            <span class="tl-tag">Workday</span>
             <span class="tl-tag">PMO Governance</span>
-            <span class="tl-tag">CPI / SPI Tracking</span>
-            <span class="tl-tag">Agile / Scrum</span>
+            <span class="tl-tag">Agile / Scrum / Waterfall</span>
           </div>
         </div>
       </div>
@@ -549,21 +595,31 @@
         <div class="tl-date">Feb 2015<br>May 2016</div>
         <div class="tl-dot-col"><div class="tl-dot"></div></div>
         <div class="tl-card">
-          <div class="tl-role">Engineering Project Manager</div>
-          <div class="tl-co">Abbott Medical Optics &nbsp;&middot;&nbsp; FDA-Regulated Healthcare Programs</div>
+          <div class="tl-role">Project Manager</div>
+          <div class="tl-co">Abbott Medical Optics &nbsp;&middot;&nbsp; Ophthalmic Laser Systems</div>
           <div class="tl-meta">
             <span class="badge bd-blue">FDA Regulated</span>
-            <span class="badge bd-blue">Ophthalmic Devices</span>
+            <span class="badge bd-blue">12 to 15 FTEs</span>
+            <span class="badge bd-blue">2 External Vendors</span>
             <span class="badge bd-gray">1 yr 4 mos</span>
           </div>
-          <p class="tl-body">Managed complex programs in an FDA-regulated ophthalmic device environment, coordinating software, systems integration, hardware, and validation workstreams across teams of twenty-five or more. Structured project charters, scope documents, and change management processes aligned to compliance requirements. Reduced project delays by 20 percent through structured dependency management and reduced time to market by 15 percent through KPI tracking and sprint optimization.</p>
-          <div class="tl-tags">
+          <p class="tl-body">Managed end-to-end regulated optical medical device development programs valued at $8M to $15M, leading cross-functional teams across R&D, Quality, Regulatory, Clinical, and Manufacturing Engineering to deliver first-of-kind optical hardware systems. Executed stage-gate Engineering Development and Manufacturing (EMD) programs, overseeing requirements traceability, risk management aligned to ISO 14971, design verification and validation, and formal design transfer into GMP-controlled manufacturing environments. Implemented structured Integrated Product Development (IPD) frameworks that improved time-to-market by 15 percent while maintaining full compliance with FDA and ISO 13485 requirements. Led root cause investigations and corrective action initiatives during pilot production, reducing manufacturing non-conformances by 18 percent prior to commercial release. Collaborated with production teams to refine assembly workflows and test automation strategies, increasing production throughput by 12 percent while maintaining quality metrics. Led the complete product transfer effort for the service organization, developing theory-of-operations documentation and training material for Field Service, Technical Application Support, and Customer Education teams.</p>
+          <div style="margin-top:10px">
+            <div class="prod-role-label">Products</div>
+            <div style="display:flex;flex-wrap:wrap;gap:5px">
+              <span class="tl-tag">VISX Star S4 IR Active Trak</span>
+              <span class="tl-tag">Wavescan Wavefront System</span>
+              <span class="tl-tag">iFS Advanced Femtosecond Laser</span>
+            </div>
+          </div>
+          <div class="tl-tags" style="margin-top:10px">
             <span class="tl-tag">FDA Compliance</span>
-            <span class="tl-tag">Ophthalmic Laser Systems</span>
-            <span class="tl-tag">IQ / OQ / PQ Validation</span>
+            <span class="tl-tag">Requirements Decomposition</span>
+            <span class="tl-tag">System Architecture</span>
             <span class="tl-tag">CGMP</span>
-            <span class="tl-tag">FMEA</span>
-            <span class="tl-tag">Requirements Traceability</span>
+            <span class="tl-tag">Design for Testability</span>
+            <span class="tl-tag">Design for Manufacturability</span>
+            <span class="tl-tag">Product Transfer</span>
           </div>
         </div>
       </div>
@@ -573,57 +629,274 @@
         <div class="tl-dot-col"><div class="tl-dot"></div></div>
         <div class="tl-card">
           <div class="tl-role">Sr. Systems Engineer</div>
-          <div class="tl-co">BD Biosciences &nbsp;&middot;&nbsp; Global Clinical and Manufacturing Platforms</div>
+          <div class="tl-co">BD Biosciences &nbsp;&middot;&nbsp; IVD Diagnostics and Clinical Platforms</div>
           <div class="tl-meta">
             <span class="badge bd-blue">IVD Diagnostics</span>
-            <span class="badge bd-blue">ISO 13485</span>
+            <span class="badge bd-blue">15 to 20 FTEs</span>
+            <span class="badge bd-blue">2 External Vendors</span>
             <span class="badge bd-gray">3 yrs 7 mos</span>
           </div>
-          <p class="tl-body">Led system-level architecture work integrating hardware, firmware, analytics, and cloud-connected services into IVD diagnostic platforms, following INCOSE systems engineering principles throughout. Defined interface specifications across electrical, mechanical, and software subsystems and built data models bridging embedded firmware and cloud analytics. Reduced verification defects by 20 percent through structured traceability frameworks and risk-based test planning aligned to ISO 13485 and ISO 14971.</p>
-          <div class="tl-tags">
-            <span class="tl-tag">BD FACSuite</span>
-            <span class="tl-tag">Flow Cytometry</span>
-            <span class="tl-tag">INCOSE SE</span>
+          <p class="tl-body">Led system engineering for next-generation flow cytometry and optical diagnostic instrumentation platforms, integrating precision optics, embedded electronics, fluidics, and software subsystems on programs with product valuations exceeding $25M. Authored system-level requirements, interface control documents (ICDs), and architecture specifications that reduced cross-functional integration defects by 20 percent and improved subsystem compatibility during verification cycles. Directed formal design reviews and failure mode analyses (FMEA), mitigating high-risk technical issues early in development and reducing downstream verification rework by 17 percent. Implemented ISO 14971 risk management processes and collaborated with regulatory affairs on documentation and submissions for regulatory approvals. Supported production readiness activities including reliability growth testing, qualification protocols, and manufacturing documentation alignment, contributing to successful commercial launch milestones.</p>
+          <div style="margin-top:10px">
+            <div class="prod-role-label">Products</div>
+            <div style="display:flex;flex-wrap:wrap;gap:5px">
+              <span class="tl-tag">BD Laboratory Information System</span>
+              <span class="tl-tag">Diva Flow Cytometry Application</span>
+              <span class="tl-tag">BD FACSuite Clinical</span>
+              <span class="tl-tag">BD FACSCanto Clinical</span>
+              <span class="tl-tag">BD FACS Workflow Manager</span>
+            </div>
+          </div>
+          <div class="tl-tags" style="margin-top:10px">
             <span class="tl-tag">ISO 13485</span>
             <span class="tl-tag">ISO 14971</span>
-            <span class="tl-tag">LIMS</span>
+            <span class="tl-tag">Interface Control Documents (ICD)</span>
+            <span class="tl-tag">FMEA</span>
+            <span class="tl-tag">System V&V</span>
             <span class="tl-tag">Design Controls</span>
             <span class="tl-tag">IBM DOORS</span>
+            <span class="tl-tag">Reliability Growth Testing</span>
           </div>
         </div>
       </div>
 
       <div class="tl-item">
-        <div class="tl-date">Jan 2004<br>Jun 2011</div>
+        <div class="tl-date">Aug 2004<br>Jun 2011</div>
         <div class="tl-dot-col"><div class="tl-dot"></div></div>
         <div class="tl-card">
           <div class="tl-role">Systems Engineer</div>
-          <div class="tl-co">Medtronic MiniMed &nbsp;&middot;&nbsp; Northridge, CA &nbsp;&middot;&nbsp; Insulin Pump and CGM Systems</div>
+          <div class="tl-co">Medtronic MiniMed &nbsp;&middot;&nbsp; Northridge, CA &nbsp;&middot;&nbsp; CGM and Insulin Delivery Systems</div>
           <div class="tl-meta">
             <span class="badge bd-blue">Class III Medical Devices</span>
             <span class="badge bd-blue">IEC 62304</span>
-            <span class="badge bd-blue">PMA</span>
-            <span class="badge bd-gray">7 Years</span>
+            <span class="badge bd-blue">3 External Vendors</span>
+            <span class="badge bd-gray">6 yrs 11 mos</span>
           </div>
-          <p class="tl-body">Nearly seven years working on continuous glucose monitoring and insulin delivery platforms that were simultaneously electromechanical, embedded, and cloud-connected. Owned requirements development, integration testing, defect tracking, and validation documentation across the full SDLC. Managed interface design across hardware, firmware, and software subsystems and contributed directly to PMA regulatory submissions under IEC 62304 and 21 CFR Part 820. Improved cross-team issue resolution cycle time by 15 percent through structured defect tracking and risk prioritization. Mentored junior engineers on documentation standards, design controls, and lifecycle practices.</p>
-          <div class="tl-tags">
-            <span class="tl-tag">MySentry System</span>
-            <span class="tl-tag">CareLink Pro</span>
+          <p class="tl-body">Contributed to full lifecycle development of Class II and III medical device platforms, supporting hardware integration, system testing, and regulatory submission processes including 510(k). Developed and maintained detailed requirements traceability matrices linking user needs, engineering specifications, risk controls, and verification protocols, reducing documentation gaps by 25 percent and strengthening audit readiness. Performed requirement analysis and authored software requirements documents capturing user stories, workflows, and field definitions. Designed test cases with QTP automation to cover corner scenarios including stress testing. Executed system integration testing and cross-functional defect resolution cycles across hardware, firmware, and software components, accelerating issue closure timelines by 18 percent. Partnered with manufacturing engineering during product launches to refine production test strategies and validate process capability through Gage R&amp;R studies, improving first-pass yield performance. Evaluated manufacturing lines being released to production to ensure capable and consistent operations from day one.</p>
+          <div style="margin-top:10px">
+            <div class="prod-role-label">Products</div>
+            <div style="display:flex;flex-wrap:wrap;gap:5px">
+              <span class="tl-tag">MySentry Monitoring System</span>
+              <span class="tl-tag">CareLink Pro Online Consumer Application</span>
+              <span class="tl-tag">CareLink Desktop Clinic Application</span>
+            </div>
+          </div>
+          <div class="tl-tags" style="margin-top:10px">
             <span class="tl-tag">21 CFR Part 820</span>
+            <span class="tl-tag">IEC 62304</span>
+            <span class="tl-tag">Software Requirements</span>
+            <span class="tl-tag">Risk Register</span>
+            <span class="tl-tag">QTP Test Automation</span>
+            <span class="tl-tag">Electronic Circuit Troubleshooting</span>
+            <span class="tl-tag">Prototype Testing</span>
             <span class="tl-tag">DHF / V&V</span>
-            <span class="tl-tag">Embedded Systems</span>
-            <span class="tl-tag">IoT / Connected Device</span>
-            <span class="tl-tag">Reliability Engineering</span>
-            <span class="tl-tag">DVT / DFT</span>
           </div>
         </div>
       </div>
     </div>
   </section>
 
-  <!-- 04 COMPETENCIES -->
+  <!-- 04 MEDICAL DEVICE PRODUCTS -->
+  <section id="products">
+    <div class="sec-label"><span class="sec-num">04</span><h2>Medical device products</h2></div>
+    <div class="prod-intro">
+      <p>Over fifteen years of working in regulated medical device environments, the product experience spans Class III implantable systems, connected CGM and insulin delivery platforms, IVD diagnostic instruments, and FDA-cleared ophthalmic laser systems. Each product required full design control compliance from user needs through design transfer, and each one left behind a deeper understanding of what it takes to bring a safety-critical device from concept to patient.</p>
+    </div>
+    <div class="prod-grid">
+
+      <div class="prod-card">
+        <div class="prod-header">
+          <div class="prod-icon-box">&#128138;</div>
+          <div>
+            <div class="prod-company-badge">Medtronic MiniMed &nbsp;&middot;&nbsp; Class III &nbsp;&middot;&nbsp; Aug 2004 to Jun 2011</div>
+            <div class="prod-name">MySentry Remote Monitoring System</div>
+            <div class="prod-type">Connected CGM remote monitor &nbsp;&middot;&nbsp; Wireless transmission to bedside display</div>
+          </div>
+        </div>
+        <div class="prod-body">
+          <p class="prod-desc">The MySentry system transmitted real-time CGM data wirelessly from a patient's insulin pump to a remote monitor display, giving caregivers visibility during overnight hours without disturbing the patient. A Class III device requiring PMA submission, it combined embedded firmware, RF communication, and a bedside display device with safety-critical alert logic.</p>
+          <div>
+            <div class="prod-role-label">Contributions</div>
+            <ul class="prod-contributions">
+              <li>Performed requirement analysis and developed software requirements documents capturing user stories, workflows, and field definitions for the wireless transmission and alert subsystems</li>
+              <li>Developed and managed risk through a formal risk register with proactive mitigation and contingency planning under ISO 14971</li>
+              <li>Designed test cases with QTP automation covering corner scenarios and stress testing of the RF link and alert logic</li>
+              <li>Documented test plans and reports with technical rationale supporting qualifications, risk assessments, and work instructions for PMA submission</li>
+            </ul>
+          </div>
+        </div>
+        <div class="prod-footer">
+          <span class="prod-tag">Class III</span>
+          <span class="prod-tag">PMA</span>
+          <span class="prod-tag">IEC 62304</span>
+          <span class="prod-tag">RF / Wireless</span>
+          <span class="prod-tag">21 CFR Part 820</span>
+          <span class="prod-tag">Risk Register</span>
+          <span class="prod-tag">QTP Automation</span>
+        </div>
+      </div>
+
+      <div class="prod-card">
+        <div class="prod-header">
+          <div class="prod-icon-box">&#128187;</div>
+          <div>
+            <div class="prod-company-badge">Medtronic MiniMed &nbsp;&middot;&nbsp; Class III &nbsp;&middot;&nbsp; Aug 2004 to Jun 2011</div>
+            <div class="prod-name">CareLink Pro and CareLink Desktop Clinic Application</div>
+            <div class="prod-type">Cloud-connected patient data management &nbsp;&middot;&nbsp; Clinical and consumer software</div>
+          </div>
+        </div>
+        <div class="prod-body">
+          <p class="prod-desc">CareLink was the software ecosystem that aggregated CGM, pump, and meter data for clinical review and patient self-management. CareLink Pro served endocrinology clinics with data trending and report generation while the Desktop application gave individual patients visibility into their own device history. Both required IEC 62304-compliant software development and integration with the broader MiniMed device ecosystem.</p>
+          <div>
+            <div class="prod-role-label">Contributions</div>
+            <ul class="prod-contributions">
+              <li>Authored software requirements documents with user story decomposition and field-level definitions for data ingestion, report generation, and device synchronization workflows</li>
+              <li>Collaborated with quality engineers and R&amp;D to ensure software performance compliance with IEC 62304 across all software items</li>
+              <li>Performed troubleshooting on complex integration scenarios and validated data fidelity between pump firmware and the clinical reporting layer</li>
+              <li>Evaluated manufacturing and release processes to ensure capable, consistent software deployment operations</li>
+            </ul>
+          </div>
+        </div>
+        <div class="prod-footer">
+          <span class="prod-tag">IEC 62304</span>
+          <span class="prod-tag">Cloud-Connected</span>
+          <span class="prod-tag">Clinical Software</span>
+          <span class="prod-tag">Data Management</span>
+          <span class="prod-tag">Software V&V</span>
+          <span class="prod-tag">21 CFR Part 820</span>
+        </div>
+      </div>
+
+      <div class="prod-card">
+        <div class="prod-header">
+          <div class="prod-icon-box">&#128300;</div>
+          <div>
+            <div class="prod-company-badge">BD Biosciences &nbsp;&middot;&nbsp; IVD &nbsp;&middot;&nbsp; Jul 2011 to Jan 2015</div>
+            <div class="prod-name">BD FACSuite Clinical and BD FACSCanto Clinical</div>
+            <div class="prod-type">Flow cytometry IVD platform &nbsp;&middot;&nbsp; Clinical immunophenotyping</div>
+          </div>
+        </div>
+        <div class="prod-body">
+          <p class="prod-desc">BD FACSuite Clinical and FACSCanto Clinical are flow cytometry systems used in clinical laboratories for immunophenotyping, CD4 counting in HIV patients, and hematology analysis. The platform integrates a multi-laser benchtop analyzer with dedicated clinical software, and requires 510(k) clearance with full IVD-specific design control and ISO 13485 quality system compliance.</p>
+          <div>
+            <div class="prod-role-label">Contributions</div>
+            <ul class="prod-contributions">
+              <li>Led design and development of IVD system components spanning instrumentation, software, and hardware, defining system requirements, architecture, and specifications based on user needs and FDA / IEC regulatory standards</li>
+              <li>Coordinated integration of subsystems including the optical detection assembly, fluidics, electronics, and clinical software, and conducted system-level V&V to confirm performance, accuracy, and clinical reliability</li>
+              <li>Implemented ISO 14971 risk management processes, developing risk management plans and monitoring mitigation strategies through the full product lifecycle</li>
+              <li>Collaborated with regulatory affairs to prepare documentation for regulatory submissions and ensured traceability of all design records for compliance and knowledge transfer</li>
+            </ul>
+          </div>
+        </div>
+        <div class="prod-footer">
+          <span class="prod-tag">IVD</span>
+          <span class="prod-tag">510(k)</span>
+          <span class="prod-tag">ISO 13485</span>
+          <span class="prod-tag">ISO 14971</span>
+          <span class="prod-tag">Flow Cytometry</span>
+          <span class="prod-tag">System V&V</span>
+          <span class="prod-tag">Regulatory Submissions</span>
+        </div>
+      </div>
+
+      <div class="prod-card">
+        <div class="prod-header">
+          <div class="prod-icon-box">&#128202;</div>
+          <div>
+            <div class="prod-company-badge">BD Biosciences &nbsp;&middot;&nbsp; IVD &nbsp;&middot;&nbsp; Jul 2011 to Jan 2015</div>
+            <div class="prod-name">BD FACSuite and BD FACS Workflow Manager</div>
+            <div class="prod-type">Research and clinical laboratory software &nbsp;&middot;&nbsp; Workflow automation</div>
+          </div>
+        </div>
+        <div class="prod-body">
+          <p class="prod-desc">BD FACSuite is the software platform that controls BD flow cytometry instruments, manages experiment setup, data acquisition, and analysis for both clinical and research applications. FACS Workflow Manager extended the platform with laboratory information management and workflow automation capabilities connecting instruments, operators, and clinical data systems across the laboratory environment.</p>
+          <div>
+            <div class="prod-role-label">Contributions</div>
+            <ul class="prod-contributions">
+              <li>Defined software and system requirements for workflow automation modules and clinical data integration interfaces across the BD instrument ecosystem</li>
+              <li>Participated in design reviews, team meetings, and project planning sessions alongside multidisciplinary teams spanning R&D, QA, manufacturing, and clinical affairs</li>
+              <li>Prepared and maintained comprehensive system specifications, design documentation, test protocols, and technical manuals ensuring accuracy and completeness for regulatory compliance</li>
+              <li>Supported integration of the BD Laboratory Information System with FACSuite workflows to enable end-to-end data traceability from sample to report</li>
+            </ul>
+          </div>
+        </div>
+        <div class="prod-footer">
+          <span class="prod-tag">Laboratory Software</span>
+          <span class="prod-tag">LIMS Integration</span>
+          <span class="prod-tag">Workflow Automation</span>
+          <span class="prod-tag">Design Documentation</span>
+          <span class="prod-tag">ISO 13485</span>
+        </div>
+      </div>
+
+      <div class="prod-card">
+        <div class="prod-header">
+          <div class="prod-icon-box">&#128064;</div>
+          <div>
+            <div class="prod-company-badge">Abbott Medical Optics &nbsp;&middot;&nbsp; Ophthalmic &nbsp;&middot;&nbsp; Feb 2015 to May 2016</div>
+            <div class="prod-name">VISX Star S4 IR with Active Trak</div>
+            <div class="prod-type">Excimer laser vision correction system &nbsp;&middot;&nbsp; LASIK and PRK</div>
+          </div>
+        </div>
+        <div class="prod-body">
+          <p class="prod-desc">The VISX Star S4 IR is an excimer laser system used for LASIK and PRK vision correction procedures, incorporating Abbott's proprietary Active Trak three-dimensional eye tracking technology to maintain laser pulse placement accuracy during patient eye movement. An FDA-cleared Class III device requiring CGMP compliance, rigorous design controls, and full design transfer documentation for the service organization.</p>
+          <div>
+            <div class="prod-role-label">Contributions</div>
+            <ul class="prod-contributions">
+              <li>Led decomposition of customer requirements into system and product requirements, and recommended system architecture for the Active Trak integration with the laser delivery subsystem</li>
+              <li>Collaborated with manufacturing and product operations to review product designs for design-to-cost, design-for-testability, and design-for-manufacturability compliance</li>
+              <li>Led the product transfer effort, developing theory-of-operations documentation and training material for Field Service, Technical Application Support, and Customer Education</li>
+              <li>Modeled systems behavior to drive architectural decisions and requirement definition and refinement across the electro-optical subsystem</li>
+            </ul>
+          </div>
+        </div>
+        <div class="prod-footer">
+          <span class="prod-tag">Class III</span>
+          <span class="prod-tag">Excimer Laser</span>
+          <span class="prod-tag">Eye Tracking</span>
+          <span class="prod-tag">CGMP</span>
+          <span class="prod-tag">Design Transfer</span>
+          <span class="prod-tag">Requirements Decomposition</span>
+        </div>
+      </div>
+
+      <div class="prod-card">
+        <div class="prod-header">
+          <div class="prod-icon-box">&#128302;</div>
+          <div>
+            <div class="prod-company-badge">Abbott Medical Optics &nbsp;&middot;&nbsp; Ophthalmic &nbsp;&middot;&nbsp; Feb 2015 to May 2016</div>
+            <div class="prod-name">iFS Advanced Femtosecond Laser and Wavescan Wavefront System</div>
+            <div class="prod-type">Femtosecond laser platform and wavefront diagnostic system &nbsp;&middot;&nbsp; Refractive surgery</div>
+          </div>
+        </div>
+        <div class="prod-body">
+          <p class="prod-desc">The iFS Advanced Femtosecond Laser creates the corneal flap in LASIK procedures with sub-micron precision through ultrafast laser pulses, while the Wavescan Wavefront system measures and maps higher-order aberrations of the entire optical system of the eye to guide customized treatment planning. Together they form the complete AMO refractive surgery platform, each requiring independent FDA clearance and coordinated systems integration.</p>
+          <div>
+            <div class="prod-role-label">Contributions</div>
+            <ul class="prod-contributions">
+              <li>Partnered with Product Management to define and prioritize business requirements based on engineering solutions for wavefront-guided treatment integration between the two platforms</li>
+              <li>Worked with cooperative communications across all levels including customers, vendors, marketing, and product management to develop aligned design input requirements</li>
+              <li>Reviewed product designs with manufacturing and product operations to confirm design-for-testability and design-for-manufacturability objectives were met across both systems</li>
+              <li>Developed service training material covering theory of operations for Field Service and Technical Application Support organizations during product transfer</li>
+            </ul>
+          </div>
+        </div>
+        <div class="prod-footer">
+          <span class="prod-tag">Femtosecond Laser</span>
+          <span class="prod-tag">Wavefront Diagnostics</span>
+          <span class="prod-tag">Refractive Surgery</span>
+          <span class="prod-tag">System Integration</span>
+          <span class="prod-tag">CGMP</span>
+          <span class="prod-tag">FDA Cleared</span>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- 05 COMPETENCIES -->
   <section id="competencies">
-    <div class="sec-label"><span class="sec-num">04</span><h2>Core competencies</h2></div>
+    <div class="sec-label"><span class="sec-num">05</span><h2>Core competencies</h2></div>
     <div class="comp-wrap">
       <div class="comp-cluster">
         <div class="comp-cluster-title">Medical Devices and Life Sciences</div>
@@ -670,7 +943,7 @@
 
   <!-- 05 SPOTLIGHTS -->
   <section id="spotlights">
-    <div class="sec-label"><span class="sec-num">05</span><h2>Program spotlights</h2></div>
+    <div class="sec-label"><span class="sec-num">06</span><h2>Program spotlights</h2></div>
     <div class="case-grid">
 
       <div class="case-card">
@@ -742,7 +1015,7 @@
 
   <!-- 06 PMO FRAMEWORK -->
   <section id="pmo">
-    <div class="sec-label"><span class="sec-num">06</span><h2>PMO framework</h2></div>
+    <div class="sec-label"><span class="sec-num">07</span><h2>PMO framework</h2></div>
     <div class="pmo-intro">
       <p>This is a structured end-to-end framework governing the full project lifecycle, covering everything from initial intake and portfolio prioritization through charter approval, staffing, execution, and delivery. It is built around PMBOK performance domains and integrates governance workflows, scoring models, and delivery systems to produce consistent, measurable outcomes across programs. Click any phase to explore the activities, artifacts, and governance controls applied at each stage.</p>
     </div>
@@ -789,7 +1062,7 @@
 
   <!-- 07 DESIGN CONTROL ARTIFACTS -->
   <section id="artifacts">
-    <div class="sec-label"><span class="sec-num">07</span><h2>Design control artifacts</h2></div>
+    <div class="sec-label"><span class="sec-num">08</span><h2>Design control artifacts</h2></div>
     <div class="art-grid">
 
       <div class="art-card">
@@ -941,7 +1214,7 @@
 
   <!-- 08 EDUCATION -->
   <section id="education">
-    <div class="sec-label"><span class="sec-num">08</span><h2>Education</h2></div>
+    <div class="sec-label"><span class="sec-num">09</span><h2>Education</h2></div>
     <div class="edu-grid">
       <div class="edu-card">
         <div class="edu-deg">Master of Science</div>
@@ -954,6 +1227,49 @@
         <div class="edu-field">Electrical and Electronics Engineering</div>
         <div class="edu-school">NED University of Engineering and Technology</div>
         <div class="edu-note">Core engineering training in circuits, systems, and electronics. The undergraduate foundation for a career spanning electromechanical platforms, embedded systems, and large-scale systems integration across regulated industries.</div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 10 TECHNOLOGY PLATFORM -->
+  <section id="technology">
+    <div class="sec-label"><span class="sec-num">10</span><h2>Technology platform</h2></div>
+    <div class="comp-wrap">
+      <div class="comp-cluster">
+        <div class="comp-cluster-title">Project and Portfolio Management</div>
+        <div class="comp-item"><span class="comp-dot"></span>MS Project (IMS, 1000+ task schedules)</div>
+        <div class="comp-item"><span class="comp-dot"></span>PDWare (resource and portfolio planning)</div>
+        <div class="comp-item"><span class="comp-dot"></span>Jira and Confluence (Agile delivery)</div>
+        <div class="comp-item"><span class="comp-dot"></span>Asana, Trello, Basecamp, Slack</div>
+        <div class="comp-item"><span class="comp-dot"></span>Zendesk (service program tracking)</div>
+        <div class="comp-item"><span class="comp-dot"></span>Excel-based capacity and budget models</div>
+      </div>
+      <div class="comp-cluster">
+        <div class="comp-cluster-title">Requirements and Lifecycle Management</div>
+        <div class="comp-item"><span class="comp-dot"></span>IBM Rational DOORS</div>
+        <div class="comp-item"><span class="comp-dot"></span>Jama Connect</div>
+        <div class="comp-item"><span class="comp-dot"></span>Caliber and Blueprint</div>
+        <div class="comp-item"><span class="comp-dot"></span>TargetProcess and Tuleap</div>
+        <div class="comp-item"><span class="comp-dot"></span>QTP Test Automation</div>
+        <div class="comp-item"><span class="comp-dot"></span>Requirements Traceability Matrices (RTM)</div>
+      </div>
+      <div class="comp-cluster">
+        <div class="comp-cluster-title">Enterprise and Cloud Platforms</div>
+        <div class="comp-item"><span class="comp-dot"></span>SAP S/4HANA</div>
+        <div class="comp-item"><span class="comp-dot"></span>Salesforce CRM</div>
+        <div class="comp-item"><span class="comp-dot"></span>Workday and Oracle</div>
+        <div class="comp-item"><span class="comp-dot"></span>AWS (Cloud Practitioner certified)</div>
+        <div class="comp-item"><span class="comp-dot"></span>Microsoft Dynamics and NetSuite</div>
+        <div class="comp-item"><span class="comp-dot"></span>SharePoint and Office 365</div>
+      </div>
+      <div class="comp-cluster">
+        <div class="comp-cluster-title">Reporting and Financial Analytics</div>
+        <div class="comp-item"><span class="comp-dot"></span>Power BI (portfolio dashboards)</div>
+        <div class="comp-item"><span class="comp-dot"></span>Excel (CPI/SPI, budget variance, capacity)</div>
+        <div class="comp-item"><span class="comp-dot"></span>Earned Value Management (EVMS)</div>
+        <div class="comp-item"><span class="comp-dot"></span>Portfolio prioritization matrices</div>
+        <div class="comp-item"><span class="comp-dot"></span>KPI and NPS frameworks</div>
+        <div class="comp-item"><span class="comp-dot"></span>Integrated Master Schedule (IMS) reporting</div>
       </div>
     </div>
   </section>
