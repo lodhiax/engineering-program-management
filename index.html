@@ -307,10 +307,10 @@
   .cb-outcome { background: #e9ebec; border: 1px solid #d4d8db; border-radius: 6px; padding: 11px 14px; margin-top: 4px; }
   .cb-outcome p { font-size: 12.5px; color: #3a454e; line-height: 1.72; }
 
-  /* ── PMO Framework ── */
-  .pmo-intro { background: var(--white); border: 1px solid var(--rule); border-radius: 10px; padding: 26px 28px; margin-bottom: 24px; }
-  .pmo-intro p { font-size: 13.5px; color: #4b5563; line-height: 1.78; }
-  .pipeline { display: grid; grid-template-columns: repeat(5, 1fr); border: 1px solid var(--rule); border-radius: 10px; overflow: hidden; margin-bottom: 24px; }
+  /* ── Design control lifecycle ── */
+  .lifecycle-intro { background: var(--white); border: 1px solid var(--rule); border-radius: 10px; padding: 26px 28px; margin-bottom: 24px; }
+  .lifecycle-intro p { font-size: 13.5px; color: #4b5563; line-height: 1.78; }
+  .pipeline { display: grid; grid-template-columns: repeat(6, 1fr); border: 1px solid var(--rule); border-radius: 10px; overflow: hidden; margin-bottom: 24px; }
   .phase { padding: 15px 11px; background: var(--white); border-right: 1px solid var(--rule); cursor: pointer; transition: background 0.2s; }
   .phase:last-child { border-right: none; }
   .phase:hover { background: var(--ac-pale); }
@@ -326,6 +326,10 @@
   .dp-phase-lbl { font-size: 9px; letter-spacing: 0.12em; text-transform: uppercase; color: var(--ac); font-weight: 700; margin-bottom: 4px; }
   .dp-title { font-family: 'Playfair Display', serif; font-size: 18px; font-weight: 700; }
   .dp-body { font-size: 13.5px; color: #4b5563; line-height: 1.78; margin-bottom: 16px; }
+  .dp-gate { margin-top: 16px; background: var(--ink); border-radius: 8px; padding: 13px 16px; display: flex; align-items: flex-start; gap: 11px; }
+  .dp-gate-icon { color: #93a7b5; font-size: 12px; line-height: 1.5; flex-shrink: 0; }
+  .dp-gate-lbl { font-size: 9px; letter-spacing: 0.12em; text-transform: uppercase; color: #93a7b5; font-weight: 700; margin-bottom: 3px; }
+  .dp-gate-txt { font-size: 12px; color: #b7bec3; line-height: 1.6; }
   .pill-list { display: flex; flex-wrap: wrap; gap: 7px; }
   .pill { font-size: 10px; background: var(--ac-light); color: #2c3e52; padding: 3px 10px; border-radius: 4px; font-weight: 600; }
   .pill.gov { background: #eef0f0; color: #565f68; }
@@ -435,7 +439,8 @@
     .metrics-strip { padding: 0 24px; }
     .container { padding: 36px 16px 64px; }
     .pipeline { grid-template-columns: 1fr 1fr; }
-    .phase:nth-child(5) { grid-column: span 2; border-right: none; }
+    .phase:nth-child(odd) { border-right: 1px solid var(--rule); }
+    .phase:nth-child(even) { border-right: none; }
     .case-grid, .art-grid { grid-template-columns: 1fr; }
   }
 </style>
@@ -504,7 +509,7 @@
     <a href="#products">Products</a>
     <a href="#competencies">Competencies</a>
     <a href="#spotlights">Spotlights</a>
-    <a href="#pmo">PMO Framework</a>
+    <a href="#design-control">Design Control</a>
     <a href="#artifacts">Artifacts</a>
     <a href="#education">Education</a>
     <a href="#technology">Technology</a>
@@ -896,6 +901,37 @@
         </div>
       </div>
 
+      <div class="prod-card">
+        <div class="prod-header">
+          <div class="prod-icon-box">&#128262;</div>
+          <div>
+            <div class="prod-company-badge">Abbott Medical Optics &nbsp;&middot;&nbsp; Ophthalmic &nbsp;&middot;&nbsp; Feb 2015 to May 2019</div>
+            <div class="prod-name">iLASIK Surgical System &mdash; Laser Replacement and Optimization</div>
+            <div class="prod-type">Surgical laser end-of-life qualification &nbsp;&middot;&nbsp; Optical equivalence and 510(k) support</div>
+          </div>
+        </div>
+        <div class="prod-body">
+          <p class="prod-desc">When the surgical laser reached manufacturer end-of-life, the iLASIK platform needed a qualified replacement that preserved clinical performance and regulatory standing without re-opening the device's safety case. The work centered on proving optical equivalence &mdash; wavelength, beam profile, pulse energy, and drift &mdash; between the legacy and replacement lasers across the full operating life.</p>
+          <div>
+            <div class="prod-role-label">Contributions</div>
+            <ul class="prod-contributions">
+              <li>Led technical evaluation and qualification of the replacement laser following supplier end-of-life notification, defining selection criteria across wavelength consistency, optical power, beam profile, energy stability, and thermal performance</li>
+              <li>Characterized the legacy and replacement lasers and built the end-of-life performance model, mapping optical power, wavelength drift, and pulse consistency against operating hours to set the replacement interval and safety margin</li>
+              <li>Coordinated Design Verification Testing (DVT), Design Functional Testing (DFT), and instrument-level integration to confirm the replacement held clinical accuracy, calibration, optical alignment, and safety interlocks</li>
+              <li>Directed reliability and accelerated life testing and consolidated the equivalence evidence, risk-file updates, and DHF records supporting the 510(k) substantial-equivalence submission</li>
+            </ul>
+          </div>
+        </div>
+        <div class="prod-footer">
+          <span class="prod-tag">Optical Equivalence</span>
+          <span class="prod-tag">Laser Characterization</span>
+          <span class="prod-tag">End-of-Life Qualification</span>
+          <span class="prod-tag">DVT / DFT</span>
+          <span class="prod-tag">Accelerated Life Testing</span>
+          <span class="prod-tag">510(k)</span>
+        </div>
+      </div>
+
     </div>
   </section>
 
@@ -1016,53 +1052,106 @@
         </div>
       </div>
 
+      <div class="case-card">
+        <div class="case-accent"></div>
+        <div class="case-body">
+          <div class="case-hd"><div class="case-icon">&#128736;</div><span class="badge bd-dark">Medical Devices</span></div>
+          <div class="case-title">Requalifying a critical component to take $45 out of every instrument built</div>
+          <div class="cb-label prob">The problem</div>
+          <p class="cb-p">A precision instrument carried a single-source, high-cost purchased component &mdash; a needle assembly &mdash; that set both its material cost and its supply risk. There was no qualified alternative and no measurement baseline proving where assembly variation actually came from, and a production ramp was approaching that would multiply every dollar of that cost across the batch.</p>
+          <div class="cb-divider"></div>
+          <div class="cb-label appr">What moved it</div>
+          <p class="cb-p">A Lean Six Sigma DMAIC project mapped the end-to-end assembly workflow, and a Gauge R&amp;R study established a trustworthy measurement baseline before any change was proposed &mdash; instrumentation before optimization. An alternate supplier was evaluated against the full performance and quality profile, then qualified through bench testing and process validation (IQ, OQ, PQ) so the switch rested on evidence rather than price alone.</p>
+          <div class="cb-divider"></div>
+          <div class="cb-label outc">Outcome</div>
+          <div class="cb-outcome"><p>The qualified alternate met every performance and quality requirement while removing roughly $45 of material cost per instrument &mdash; on the order of $500K in annual savings at production volume &mdash; with no loss of performance or reliability. The requalification also standardized the assembly process and reduced single-source supply risk.</p></div>
+        </div>
+      </div>
+
+      <div class="case-card">
+        <div class="case-accent"></div>
+        <div class="case-body">
+          <div class="case-hd"><div class="case-icon">&#128737;</div><span class="badge bd-dark">Functional Safety</span></div>
+          <div class="case-title">Turning a fault into a safe state before it could reach a clinical reading</div>
+          <div class="cb-label prob">The problem</div>
+          <p class="cb-p">Field feedback surfaced a quiet but serious risk: after certain fault conditions, the device could keep operating and display readings a clinician might trust, with no clear signal that the measurement could no longer be relied on. In a regulated clinical setting, a device running in an unknown state is a patient-safety hazard, not just a defect.</p>
+          <div class="cb-divider"></div>
+          <div class="cb-label appr">What moved it</div>
+          <p class="cb-p">The response was a fail-safe Sleep Mode driven from Voice-of-Customer input through to verification. On detecting a predefined fault, the device stops acquiring or displaying measurements, raises a clear alert, and requires a reset plus passing self-tests before it can return to clinical use. Delivering it meant threading new requirements through hardware power-state transitions, firmware fault-detection and recovery logic, and the system risk file at once, with traceability held from customer need to test.</p>
+          <div class="cb-divider"></div>
+          <div class="cb-label outc">Outcome</div>
+          <div class="cb-outcome"><p>The feature closed the failure path by design &mdash; a faulted device can no longer present a reading as valid. Fault detection, user alerts, and mandatory self-test-before-return were verified through functional, fault-injection, and regression testing, and the work fed directly into the FDA 510(k) documentation package.</p></div>
+        </div>
+      </div>
+
+      <div class="case-card">
+        <div class="case-accent"></div>
+        <div class="case-body">
+          <div class="case-hd"><div class="case-icon">&#127963;</div><span class="badge bd-dark">Regulatory</span></div>
+          <div class="case-title">Rebuilding a submission's traceability to clear an FDA inquiry</div>
+          <div class="cb-label prob">The problem</div>
+          <p class="cb-p">An FDA review returned observations against the software interface that displayed and managed a regulated device's data. The gaps were not in the product's behavior but in its evidence: incomplete requirements traceability, verification records that no longer fully supported the performance claims, and design documentation scattered across teams and years.</p>
+          <div class="cb-divider"></div>
+          <div class="cb-label appr">What moved it</div>
+          <p class="cb-p">Each observation was triaged into documentation, verification, traceability, and performance-evidence categories, then worked to closure. The core effort was reconstructing the Requirements Traceability Matrix end to end &mdash; mapping user needs to requirements to design outputs to verification and validation &mdash; and generating new records where history was missing. Where prior test evidence fell short, targeted retesting and reanalysis were coordinated to substantiate every claim in the package.</p>
+          <div class="cb-divider"></div>
+          <div class="cb-label outc">Outcome</div>
+          <div class="cb-outcome"><p>The submission went back with a complete, defensible traceability chain and verification evidence that stood on its own. Documentation and DHF quality improved in the process, and the response gave Regulatory Affairs a technically robust package aligned to the agency's expectations.</p></div>
+        </div>
+      </div>
+
     </div>
   </section>
 
-  <!-- 06 PMO FRAMEWORK -->
-  <section id="pmo">
-    <div class="sec-label"><span class="sec-num">07</span><h2>PMO framework</h2></div>
-    <div class="pmo-intro">
-      <p>This is a structured end-to-end framework governing the full project lifecycle, covering everything from initial intake and portfolio prioritization through charter approval, staffing, execution, and delivery. It is built around PMBOK performance domains and integrates governance workflows, scoring models, and delivery systems to produce consistent, measurable outcomes across programs. Click any phase to explore the activities, artifacts, and governance controls applied at each stage.</p>
+  <!-- 07 DESIGN CONTROL LIFECYCLE -->
+  <section id="design-control">
+    <div class="sec-label"><span class="sec-num">07</span><h2>Design control lifecycle</h2></div>
+    <div class="lifecycle-intro">
+      <p>This is the phase-gated design control process governing a medical device from user need through commercial release and post-market surveillance. Built around FDA 21 CFR 820.30 and ISO 13485, each phase converts a defined set of inputs into verified outputs, and cannot advance until its gate review confirms the evidence is complete and traceable. Click any phase to explore its purpose, deliverables, and gate checkpoint.</p>
     </div>
     <div class="pipeline" id="pipeline">
       <div class="phase active" onclick="selectPhase(0)">
         <div class="phase-num">01</div>
-        <div class="phase-title">Project Intake</div>
-        <div class="phase-sub">Requests and automation</div>
+        <div class="phase-title">Requirements &amp; Planning</div>
+        <div class="phase-sub">Design inputs &middot; Gate 1</div>
       </div>
       <div class="phase" onclick="selectPhase(1)">
         <div class="phase-num">02</div>
-        <div class="phase-title">Evaluation</div>
-        <div class="phase-sub">Scoring and portfolio</div>
+        <div class="phase-title">Design &amp; Development</div>
+        <div class="phase-sub">Design outputs &middot; Gate 2</div>
       </div>
       <div class="phase" onclick="selectPhase(2)">
         <div class="phase-num">03</div>
-        <div class="phase-title">Approval</div>
-        <div class="phase-sub">Review board and workflow</div>
+        <div class="phase-title">Verification &amp; Bench Test</div>
+        <div class="phase-sub">Built right &middot; Gate 3</div>
       </div>
       <div class="phase" onclick="selectPhase(3)">
         <div class="phase-num">04</div>
-        <div class="phase-title">Charter</div>
-        <div class="phase-sub">Sign-off and activation</div>
+        <div class="phase-title">Transfer &amp; Line Validation</div>
+        <div class="phase-sub">IQ / OQ / PQ &middot; Gate 4</div>
       </div>
       <div class="phase" onclick="selectPhase(4)">
         <div class="phase-num">05</div>
-        <div class="phase-title">Execution</div>
-        <div class="phase-sub">Tracking and closure</div>
+        <div class="phase-title">Clinical &amp; Submission</div>
+        <div class="phase-sub">Right device &middot; Gate 5</div>
+      </div>
+      <div class="phase" onclick="selectPhase(5)">
+        <div class="phase-num">06</div>
+        <div class="phase-title">Commercial &amp; Post-Market</div>
+        <div class="phase-sub">Clearance &middot; Gate 6</div>
       </div>
     </div>
     <div class="detail-panel" id="detail-panel"></div>
-    <div class="ps-label" style="margin-bottom: 14px;">PMBOK performance domains applied across all programs</div>
+    <div class="ps-label" style="margin-bottom: 14px;">Standards and controls governing every phase</div>
     <div class="domains-grid">
-      <div class="domain-card"><div class="dc-title">Stakeholder</div><div class="dc-sub">Business cases, communications, stakeholder registers, user stories</div></div>
-      <div class="domain-card"><div class="dc-title">Team</div><div class="dc-sub">Project calendars, activity lists, resource and capacity planning</div></div>
-      <div class="domain-card"><div class="dc-title">Development and life cycle</div><div class="dc-sub">Milestone mapping, roadmap monitoring, predictive and adaptive methods</div></div>
-      <div class="domain-card"><div class="dc-title">Planning</div><div class="dc-sub">WBS, Gantt charts, burndown, schedule and budget management</div></div>
-      <div class="domain-card"><div class="dc-title">Project work</div><div class="dc-sub">Resource management, baselines, knowledge management, issue logging</div></div>
-      <div class="domain-card"><div class="dc-title">Delivery</div><div class="dc-sub">WBS, velocity planning, user stories, definition of done, reporting</div></div>
-      <div class="domain-card"><div class="dc-title">Measurement</div><div class="dc-sub">Milestone reporting, budget and time tracking, Gantt and burndown analysis</div></div>
-      <div class="domain-card"><div class="dc-title">Uncertainty</div><div class="dc-sub">Risk registers, RAID logs, issue tracking, assumption and dependency management</div></div>
+      <div class="domain-card"><div class="dc-title">21 CFR 820.30</div><div class="dc-sub">FDA Quality System Regulation design control requirements</div></div>
+      <div class="domain-card"><div class="dc-title">ISO 13485</div><div class="dc-sub">Quality management system for medical device design and manufacture</div></div>
+      <div class="domain-card"><div class="dc-title">ISO 14971</div><div class="dc-sub">Risk management applied across the full product lifecycle</div></div>
+      <div class="domain-card"><div class="dc-title">IEC 60601</div><div class="dc-sub">Electrical safety and essential performance for medical electrical devices</div></div>
+      <div class="domain-card"><div class="dc-title">IEC 62304</div><div class="dc-sub">Software lifecycle processes for medical device software</div></div>
+      <div class="domain-card"><div class="dc-title">IEC 62366</div><div class="dc-sub">Usability engineering and human factors validation</div></div>
+      <div class="domain-card"><div class="dc-title">Design Reviews</div><div class="dc-sub">Formal phase-gate reviews at each design control checkpoint</div></div>
+      <div class="domain-card"><div class="dc-title">Design History File</div><div class="dc-sub">Objective evidence compiled and locked across every phase</div></div>
     </div>
   </section>
 
@@ -1285,44 +1374,64 @@
 <script>
 const phases = [
   {
-    icon: "📥", tag: "Intake",
-    lbl: "Phase 01 — Project intake",
-    title: "Project request submission",
-    body: "Clients submit project requests through a structured intake process using customized project request forms. Each submission captures project type, scope, goals, organizational risks, ROI, and stakeholder information. Automation rules fire on submission, triggering notifications and routing the request into the appropriate approval workflow.",
-    artifacts: ["Project Request Form", "Client Portal Submission", "Project Type Definition", "Automation Rules", "Workflow Trigger"],
-    gov: ["Goals Documentation", "Organizational Risks", "ROI and Benefits Capture"]
+    icon: "📋", tag: "Gate 1",
+    lbl: "Phase 01 — Requirements and planning",
+    title: "Design inputs and regulatory strategy",
+    body: "Establishes project scope, regulatory strategy, and user requirements, translating clinical and patient needs into unambiguous, testable engineering specifications that anchor everything downstream.",
+    inputs: ["Market Requirements Document (MRD)", "User Needs Document", "Intended Use Statement", "Regulatory Strategy (510(k) vs PMA)"],
+    outputs: ["Design and Development Plan (DDP)", "Product Requirements / Design Inputs", "Risk Management Plan and Hazard Analysis (ISO 14971)", "Software Requirements Specification (SRS)"],
+    gate: "Gate 1 — Design Input Review",
+    gateBody: "Verifies that inputs are comprehensive, unambiguous, non-conflicting, and fully testable."
   },
   {
-    icon: "📊", tag: "Evaluation",
-    lbl: "Phase 02 — Evaluation and scoring",
-    title: "Prioritization and portfolio analysis",
-    body: "Submitted requests are evaluated using project request scorecards and portfolio planning reports. The Priority Matrix compares requests across payback period, risk, and composite score. A Budget and Capacity Planner enables what-if scenario analysis alongside the live portfolio, supporting data-driven investment decisions.",
-    artifacts: ["Request Scorecard", "Priority Matrix Report", "Scoring Model (NPV / IRR)", "Budget and Capacity Planner", "Portfolio Report"],
-    gov: ["NPV / IRR Analysis", "Composite Scoring", "Portfolio Risk View"]
+    icon: "📐", tag: "Gate 2",
+    lbl: "Phase 02 — Design and development",
+    title: "Design outputs, architecture, and prototypes",
+    body: "Translates approved design inputs into mechanical, electrical, and software design outputs — blueprints, code, physical architecture, and early proof-of-concept prototypes — with traceability holding from every input to its output.",
+    inputs: ["Approved Product Requirements / Design Inputs", "Active Risk Management Plan and Hazard Analysis"],
+    outputs: ["Mechanical Drawings, CAD, Schematics, BOM", "Software Architecture and Detailed Design (SDD)", "Pilot Development Prototypes", "Draft IFU, Manuals, and Labeling", "Design Traceability Matrix framework"],
+    gate: "Gate 2 — Design Output Review",
+    gateBody: "Confirms the physical and digital design package meets all design input specifications."
   },
   {
-    icon: "✅", tag: "Governance",
-    lbl: "Phase 03 — Approval and governance",
-    title: "Review board and workflow governance",
-    body: "The PMO Officer assigns requests to approval workflows and may edit request details at any step. Each workflow step defines what the reviewer can approve, reject, or escalate. Rejecting a step returns the request to the originator with notification. Approved requests proceed to charter and declined requests trigger automated notification to the creator.",
-    artifacts: ["Workflow Template", "Approval Step Configuration", "Rejection Notification", "Workflow Audit Trail"],
-    gov: ["PMO Officer Oversight", "Step-level Permissions", "Escalation and Routing Rules"]
+    icon: "🔬", tag: "Gate 3",
+    lbl: "Phase 03 — Verification and bench testing",
+    title: "Proving the device was built right",
+    body: "Rigorous lab-based engineering evaluation proving the design outputs structurally match the approved inputs — did we build the device right? Spans mechanical stress, electrical safety, biocompatibility, software regression, and human factors.",
+    inputs: ["Approved Design Outputs", "Master Verification Plan (MVP)", "Final Labeling and Draft IFU"],
+    outputs: ["Verification Protocols", "Executed Verification Reports (IEC 60601, biocompatibility, mechanical)", "Software Verification / Regression Reports", "Human Factors and Usability Reports", "Traceability Matrix — 100% verification coverage"],
+    gate: "Gate 3 — Design Verification Review",
+    gateBody: "Confirms all bench and lab testing passed with no unresolved discrepancies."
   },
   {
-    icon: "📋", tag: "Charter",
-    lbl: "Phase 04 — Charter and kick-off",
-    title: "Project charter approval and activation",
-    body: "Approved requests are staffed and converted to active projects. Projects begin inactive and are formally activated by the PMO Officer. Project charters cover start and end dates, time and expense budgets, description, requirements, stakeholders, goals, risks, and benefits. Charter approval gates the kickoff meeting and formal project launch.",
-    artifacts: ["Project Charter", "Start and End Dates", "Time and Expense Budget", "Stakeholder Register", "Requirements Document", "Kickoff Agenda"],
-    gov: ["PMO Activation Gate", "Charter Sign-off", "Scope Baseline", "Budget Baseline"]
+    icon: "🏭", tag: "Gate 4",
+    lbl: "Phase 04 — Design transfer and line validation",
+    title: "Validating production and Beta build",
+    body: "Transitions the finalized design into mass manufacturing — validating production lines, training operators, and generating production-equivalent Alpha and clinical-ready Beta devices under full QMS control.",
+    inputs: ["Approved Verification Package", "Manufacturing Process Flows, SOPs, Tooling Specs"],
+    outputs: ["Line Validation (IQ / OQ / PQ) Protocols and Reports", "Internal Alpha Releases", "Clinical-Ready Beta Releases", "Operator Training Records", "Draft Device Master Record (DMR)"],
+    gate: "Gate 4 — Design Transfer Review",
+    gateBody: "Certifies production lines are validated, operators trained, and Beta units authorized for human clinical exposure."
   },
   {
-    icon: "🚀", tag: "Execution",
-    lbl: "Phase 05 — Execution and delivery",
-    title: "Plans, tracking, and project closure",
-    body: "Projects are delivered through Waterfall or Agile plans depending on context. Gantt charts, burndown charts, and backlog management support scheduling and velocity tracking. Risks are monitored in the RAID log and issues are logged and escalated as needed. Time, expense, and budget performance are tracked continuously through to closure with a final Definition of Done review.",
-    artifacts: ["Project Plan (Gantt or Agile)", "RAID Log", "Issue Log", "Burndown Chart", "Time and Expense Tracking", "Status Reports", "Definition of Done"],
-    gov: ["Baseline Management", "Resource Capacity Planning", "Milestone Sign-off", "Closure Review"]
+    icon: "🏥", tag: "Gate 5",
+    lbl: "Phase 05 — Clinical trials and regulatory submission",
+    title: "Proving the right device was built",
+    body: "Deploys production-equivalent Beta devices into human clinical studies to confirm the device meets real clinical needs — did we build the right device? — and compiles the evidence into the FDA submission dossier.",
+    inputs: ["Validated Beta Devices", "Approved Clinical Protocol / FDA IDE"],
+    outputs: ["Human Clinical Trial Final Study Report", "Design Validation Report", "Finalized Traceability Matrix (needs → validation)", "510(k) Notification or PMA Application"],
+    gate: "Gate 5 — Regulatory and Validation Review",
+    gateBody: "Evaluates clinical validation safety metrics and locks the Design History File (DHF) while awaiting the FDA verdict."
+  },
+  {
+    icon: "📦", tag: "Gate 6",
+    lbl: "Phase 06 — Commercial production and post-market",
+    title: "Clearance, release, and surveillance",
+    body: "On FDA clearance, the device enters commercial production and distribution, with active post-market surveillance and formal change control governing safety performance across the full product lifecycle.",
+    inputs: ["Closed Design History File (DHF)", "Locked Device Master Record (DMR)"],
+    outputs: ["FDA Clearance Letter / Pre-Approval", "Commercial Product Release Authorization", "Device History Records (DHR)", "Post-Market Surveillance (Complaints, CAPA, Adverse Events)", "Design Change Control Workflows"],
+    gate: "Gate 6 — Commercial Sustaining Review",
+    gateBody: "Authorizes ongoing commercial sales and delegates oversight to sustaining engineering and quality surveillance teams."
   }
 ];
 
@@ -1339,10 +1448,17 @@ function selectPhase(i) {
       <span class="badge bd-dark">${d.tag}</span>
     </div>
     <div class="dp-body">${d.body}</div>
-    <div class="ps-label">Key artifacts</div>
-    <div class="pill-list" style="margin-bottom:14px">${d.artifacts.map(a => `<span class="pill">${a}</span>`).join('')}</div>
-    <div class="ps-label">Governance and controls</div>
-    <div class="pill-list">${d.gov.map(g => `<span class="pill gov">${g}</span>`).join('')}</div>
+    <div class="ps-label">Input deliverables</div>
+    <div class="pill-list" style="margin-bottom:14px">${d.inputs.map(a => `<span class="pill">${a}</span>`).join('')}</div>
+    <div class="ps-label">Output deliverables</div>
+    <div class="pill-list">${d.outputs.map(g => `<span class="pill gov">${g}</span>`).join('')}</div>
+    <div class="dp-gate">
+      <div class="dp-gate-icon">&#9670;</div>
+      <div>
+        <div class="dp-gate-lbl">${d.gate}</div>
+        <div class="dp-gate-txt">${d.gateBody}</div>
+      </div>
+    </div>
   `;
 }
 
